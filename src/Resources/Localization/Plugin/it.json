@@ -200,23 +200,23 @@
     "description": "TStrings.get_DutyInfoTitle"
   },
   "DutyInfo.NoDuty": {
-    "message": "No duty selected, use /kikolist to see all available duties.",
+    "message": "No duty selected, use /xivitalist to see all available duties.",
     "description": "TStrings.get_DutyInfoNoneSelected"
   },
   "DutyInfo.NotUnlocked": {
-    "message": "You cannot view the guide for this duty as you have not unlocked it yet.",
+    "message": "Non puoi visualizzare la guida per questo duty perché non lo hai ancora sbloccato.",
     "description": "TStrings.get_DutyInfoNotUnlocked"
   },
   "DutyList.NoneFound": {
-    "message": "No duties found.",
+    "message": "Nessun duty trovato.",
     "description": "TStrings.get_DutyListNoneFound"
   },
   "DutyList.NoGuide": {
-    "message": "No guide available for {0}.",
+    "message": "Nessuna guida disponibile per {0}.",
     "description": "TStrings.DutyListNoGuide"
   },
   "DutyList.NeedsUpdate": {
-    "message": "Cannot display duty as it was not made for this plugin version.",
+    "message": "Impossibile visualizzare duty in quanto non è stato creato per questa versione del plugin.",
     "description": "TStrings.get_DutyListNeedsUpdate"
   },
   "DutyHeading.Title": {
@@ -224,19 +224,19 @@
     "description": "TStrings.DutyHeadingTitle"
   },
   "Commands.DutyList.Help": {
-    "message": "Toggles the duty list",
+    "message": "Mostra la Duty List",
     "description": "TStrings.get_DutyListHelp"
   },
   "Commands.Settings.Help": {
-    "message": "Toggles the settings menu",
+    "message": "Mostra il menu delle impostazioni",
     "description": "TStrings.get_SettingsHelp"
   },
   "Commands.Editor.Help": {
-    "message": "Toggles the duty editor",
+    "message": "Attiva/disattiva l'editor dei Duty",
     "description": "TStrings.get_EditorHelp"
   },
   "Commands.Info.Help": {
-    "message": "Toggles the duty info window if a duty is loaded",
+    "message": "Mostra/Nasconde la finestra Duty Info se un duty è stato caricato",
     "description": "TStrings.get_InfoHelp"
   }
 }
