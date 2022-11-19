@@ -8,7 +8,7 @@ using XIVITAGuide.Types;
 
 namespace XIVITAGuide.Base
 {
-    // <summary>
+    /// <summary>
     ///     Provides access to and determines the Plugin configuration.
     /// </summary>
     [Serializable]
@@ -39,7 +39,6 @@ namespace XIVITAGuide.Base
         public class DisplayConfiguration
         {
             /// <summary>
-
             ///     Whether or not to show the support button in the UI.
             /// </summary>
             public bool DonateButtonShown { get; set; } = true;
@@ -52,12 +51,7 @@ namespace XIVITAGuide.Base
             /// <summary>
             ///     Whether or not to lock the position of the Guide viewer window.
             /// </summary>
-            public bool PreventGuideViewerMovement { get; set; }
-
-            /// <summary>
-            ///     Whether or not to prevnet resizing of the Guide viewer window.
-            /// </summary>
-            public bool PreventGuideViewerResize { get; set; }
+            public bool LockGuideViewerWindow { get; set; }
 
             /// <summary>
             ///     Mechanics that are hidden when drawing the UI.
