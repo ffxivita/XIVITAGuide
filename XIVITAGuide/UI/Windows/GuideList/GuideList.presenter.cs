@@ -20,9 +20,10 @@ namespace XIVITAGuide.UI.Windows.GuideList
         /// <summary>
         ///     Handles a guide list selection event.
         /// </summary>
+        /// <param name="guide">The guide that was selected.</param>
         public static void OnGuideListSelection(Guide guide)
         {
-            if (PluginService.WindowManager.WindowSystem.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow guideViewerWindow)
+            if (PluginService.WindowManager.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow guideViewerWindow)
             {
                 guideViewerWindow.IsOpen = true;
                 guideViewerWindow.Presenter.SelectedGuide = guide;

@@ -20,7 +20,7 @@ namespace XIVITAGuide.IPC.Providers
         public IPCProviders ID { get; } = IPCProviders.Wotsit;
 
         /// <summary>
-        ///     The IconID that represents KikoGuide in Wotsit.
+        ///     The IconID that represents XIVITAGuide in Wotsit.
         /// </summary>
         private const uint WotsitIconID = 21;
 
@@ -60,6 +60,11 @@ namespace XIVITAGuide.IPC.Providers
         private ICallGateSubscriber<bool>? wotsitAvailable;
 
         /// <summary>
+        ///     Invoke CallGateSubscriber.
+        /// </summary>
+        private ICallGateSubscriber<string, bool>? wotsitInvoke;
+
+        /// <summary>
         ///     Stored GUID for OpenListIPC.
         /// </summary>
         private string? wotsitOpenListIpc;
@@ -89,8 +94,9 @@ namespace XIVITAGuide.IPC.Providers
             try
             {
                 PluginService.PluginInterface.LanguageChanged += this.OnLanguageChange;
-                this.wotsitAvailable?.Unsubscribe(this.Initialize);
                 this.wotsitUnregister?.InvokeFunc(PluginConstants.PluginName);
+                this.wotsitAvailable?.Unsubscribe(this.Initialize);
+                this.wotsitInvoke?.Unsubscribe(this.HandleInvoke);
             }
             catch { /* Ignore */ }
         }
@@ -102,12 +108,11 @@ namespace XIVITAGuide.IPC.Providers
         {
             this.wotsitRegister = PluginService.PluginInterface.GetIpcSubscriber<string, string, uint, string>(LabelProviderRegister);
             this.wotsitUnregister = PluginService.PluginInterface.GetIpcSubscriber<string, bool>(LabelProviderUnregisterAll);
-
-            var subscribe = PluginService.PluginInterface.GetIpcSubscriber<string, bool>(LabelProviderInvoke);
-            subscribe.Subscribe(this.HandleInvoke);
+            this.wotsitInvoke = PluginService.PluginInterface.GetIpcSubscriber<string, bool>(LabelProviderInvoke);
 
             PluginService.PluginInterface.LanguageChanged += this.OnLanguageChange;
 
+            this.wotsitInvoke?.Subscribe(this.HandleInvoke);
             this.RegisterAll();
         }
 
@@ -134,28 +139,27 @@ namespace XIVITAGuide.IPC.Providers
         /// <summary>
         ///     Handles IPC invocations for Wotsit.
         /// </summary>
+        /// <param name="guid">The GUID of the invoked method.</param>
         private void HandleInvoke(string guid)
         {
             if (this.wotsitGuideIpcs.TryGetValue(guid, out var guide))
             {
-                if (PluginService.WindowManager.WindowSystem.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow guideViewerWindow)
+                if (PluginService.WindowManager.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow guideViewerWindow)
                 {
                     guideViewerWindow.Presenter.SelectedGuide = guide;
                     guideViewerWindow.IsOpen = true;
                 }
             }
-
             else if (guid == this.wotsitOpenListIpc)
             {
-                if (PluginService.WindowManager.WindowSystem.GetWindow(TWindowNames.GuideList) is GuideListWindow guideListWIndow)
+                if (PluginService.WindowManager.GetWindow(TWindowNames.GuideList) is GuideListWindow guideListWIndow)
                 {
                     guideListWIndow.IsOpen = true;
                 }
             }
-
             else if (guid == this.wotsitOpenEditorIpc)
             {
-                if (PluginService.WindowManager.WindowSystem.GetWindow(TWindowNames.GuideEditor) is EditorWindow guideEditorWindow)
+                if (PluginService.WindowManager.GetWindow(TWindowNames.GuideEditor) is EditorWindow guideEditorWindow)
                 {
                     guideEditorWindow.IsOpen = true;
                 }
@@ -165,6 +169,7 @@ namespace XIVITAGuide.IPC.Providers
         /// <summary>
         ///     When the resources are updated, we need to re-register in-case of a language change.
         /// </summary>
+        /// <param name="language"></param>
         private void OnLanguageChange(string language)
         {
             this.wotsitUnregister?.InvokeFunc(PluginConstants.PluginName);

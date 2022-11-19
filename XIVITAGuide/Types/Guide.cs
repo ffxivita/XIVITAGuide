@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using XIVITAGuide.Attributes;
+using XIVITAGuide.Localization;
+using Lumina.Excel.GeneratedSheets;
 using Newtonsoft.Json;
 
 namespace XIVITAGuide.Types
@@ -66,6 +68,11 @@ namespace XIVITAGuide.Types
         public List<uint> TerritoryIDs = new();
 
         /// <summary>
+        ///     The lore for the duty.
+        /// </summary>
+        public string? Lore;
+
+        /// <summary>
         ///     The guide section data.
         /// </summary>
         public List<Section>? Sections;
@@ -103,7 +110,7 @@ namespace XIVITAGuide.Types
                 /// <summary>
                 ///     The strategy for the phase.
                 /// </summary>
-                public string Strategy = string.Empty;
+                public string? Strategy;
 
                 /// <summary>
                 ///     The short strategy for the phase.
@@ -116,6 +123,11 @@ namespace XIVITAGuide.Types
                 public List<Mechanic>? Mechanics;
 
                 /// <summary>
+                ///     The phase's associated notes.
+                /// </summary>
+                public List<Note>? Notes;
+
+                /// <summary>
                 ///     Represents a mechanic of a guide.
                 /// </summary>
                 public class Mechanic
@@ -123,12 +135,12 @@ namespace XIVITAGuide.Types
                     /// <summary>
                     ///     The mechanic's name.
                     /// </summary>
-                    public string Name { get; set; } = "???";
+                    public string Name { get; set; } = TGenerics.Unknown;
 
                     /// <summary>
                     ///     The mechanic's description.
                     /// </summary>
-                    public string Description { get; set; } = "???";
+                    public string Description { get; set; } = TGenerics.Unspecified;
 
                     /// <summary>
                     ///     The mechanic's short description.
@@ -139,6 +151,15 @@ namespace XIVITAGuide.Types
                     ///     The type of mechanic.
                     /// </summary>
                     public int Type { get; set; } = (int)GuideMechanics.Other;
+                }
+
+                /// <summary>
+                ///     Represents a note of a guide.
+                /// </summary>
+                public class Note
+                {
+                    public string? Text { get; set; }
+                    public string? TextShort { get; set; }
                 }
             }
         }

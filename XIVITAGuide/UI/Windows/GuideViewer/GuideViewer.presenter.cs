@@ -7,6 +7,7 @@ using XIVITAGuide.Localization;
 using XIVITAGuide.Managers;
 using XIVITAGuide.Types;
 using XIVITAGuide.UI.Windows.Settings;
+using XIVITAGuide.Utils;
 
 namespace XIVITAGuide.UI.Windows.GuideViewer
 {
@@ -21,7 +22,7 @@ namespace XIVITAGuide.UI.Windows.GuideViewer
         /// </summary>
         internal static void ToggleSettingsWindow()
         {
-            if (PluginService.WindowManager.WindowSystem.GetWindow(TWindowNames.Settings) is SettingsWindow window)
+            if (PluginService.WindowManager.GetWindow(TWindowNames.Settings) is SettingsWindow window)
             {
                 window.IsOpen ^= true;
             }
@@ -30,7 +31,7 @@ namespace XIVITAGuide.UI.Windows.GuideViewer
         /// <summary>
         ///     Gets the current plugin version.
         /// </summary>
-        internal static string PluginVersion => Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? TGenerics.Unkown;
+        internal static string PluginVersion => Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? TGenerics.Unknown;
 
         /// <summary>
         ///     Pulls the configuration from the plugin service.
@@ -40,7 +41,8 @@ namespace XIVITAGuide.UI.Windows.GuideViewer
         /// <summary>
         ///     The currently selected guide to show in the GuideViewer window.
         /// </summary>
-        internal Guide? SelectedGuide;
+        // when set, the lore menu will be closed.
+        internal Guide? SelectedGuide { get; set; }
 
         /// <summary>
         ///     Last auto-selected guide.
@@ -55,6 +57,7 @@ namespace XIVITAGuide.UI.Windows.GuideViewer
         /// <summary>
         ///     Detect when the player has changed zones and update the guide viewer accordingly through the game framework update event.
         /// </summary>
+        /// <param name="e"></param>
         public void OnFrameworkUpdate(object? e)
         {
             var currentTerritory = PluginService.ClientState.TerritoryType;
@@ -70,24 +73,23 @@ namespace XIVITAGuide.UI.Windows.GuideViewer
                     this.lastAutoSelectedGuide = playerGuide;
                     if (PluginService.Configuration.Display.AutoToggleGuideForDuty)
                     {
-                        if (PluginService.WindowManager.WindowSystem.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow window)
+                        if (PluginService.WindowManager.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow window)
                         {
                             PluginLog.Debug($"GuideViewerPresenter(OnTerritoryChange): Toggling guide viewer to open and displaying guide for {playerGuide.Name}.");
                             window.IsOpen = true;
                         }
                     }
-                    else if (PluginService.WindowManager.WindowSystem.GetWindow(TWindowNames.GuideViewer)?.IsOpen == false)
+                    else if (PluginService.WindowManager.GetWindow(TWindowNames.GuideViewer)?.IsOpen == false)
                     {
-                        PluginService.PluginInterface.UiBuilder.AddNotification(TGuideViewer.GuideAvailableForDuty, PluginConstants.PluginName, NotificationType.Info);
+                        Notifications.ShowToast(message: TGuideViewer.GuideAvailableForDuty, type: NotificationType.Info);
                     }
                 }
-
                 else if (playerGuide == null && this.lastAutoSelectedGuide != null && this.lastAutoSelectedGuide == this.SelectedGuide)
                 {
                     this.SelectedGuide = null;
-                    if (PluginService.WindowManager.WindowSystem.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow window)
+                    if (PluginService.WindowManager.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow window)
                     {
-                        PluginLog.Debug($"GuideViewerPresenter(OnTerritoryChange): Toggling guide viewer to closed - no guide data found for territory and last auto-selected guide is the same as the current selected guide.");
+                        PluginLog.Debug("GuideViewerPresenter(OnTerritoryChange): Toggling guide viewer to closed - no guide data found for territory and last auto-selected guide is the same as the current selected guide.");
                         window.IsOpen = false;
                     }
                 }

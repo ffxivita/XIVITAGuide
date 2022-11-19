@@ -4,8 +4,8 @@ using Dalamud.Logging;
 using XIVITAGuide.Base;
 using XIVITAGuide.Localization;
 using XIVITAGuide.UI.Windows.Editor;
-using XIVITAGuide.UI.Windows.GuideViewer;
 using XIVITAGuide.UI.Windows.GuideList;
+using XIVITAGuide.UI.Windows.GuideViewer;
 using XIVITAGuide.UI.Windows.Settings;
 
 namespace XIVITAGuide.Managers
@@ -18,7 +18,7 @@ namespace XIVITAGuide.Managers
         private const string ListCommand = "/xivita-list";
         private const string SettingsCommand = "/xivita-config";
         private const string EditorCommand = "/xivita-editor";
-        private const string GuideViewerCommand = "/xivita-guide";
+        private const string GuideViewerCommand = "/xivita-info";
 
         /// <summary>
         ///     Initializes the CommandManager and its resources.
@@ -51,34 +51,36 @@ namespace XIVITAGuide.Managers
         /// <summary>
         ///     Event handler for when a command is issued by the user.
         /// </summary>
+        /// <param name="command">The command that was issued.</param>
+        /// <param name="args">The arguments that were passed with the command.</param>
         private void OnCommand(string command, string args)
         {
-            var windowSystem = PluginService.WindowManager.WindowSystem;
+            var windowManager = PluginService.WindowManager;
             switch (command)
             {
                 case ListCommand:
-                    if (windowSystem.GetWindow(TWindowNames.GuideList) is GuideListWindow guideListWindow)
+                    if (windowManager.GetWindow(TWindowNames.GuideList) is GuideListWindow guideListWindow)
                     {
                         guideListWindow.IsOpen = !guideListWindow.IsOpen;
                     }
 
                     break;
                 case SettingsCommand:
-                    if (windowSystem.GetWindow(TWindowNames.Settings) is SettingsWindow settingsWindow)
+                    if (windowManager.GetWindow(TWindowNames.Settings) is SettingsWindow settingsWindow)
                     {
                         settingsWindow.IsOpen = !settingsWindow.IsOpen;
                     }
 
                     break;
                 case EditorCommand:
-                    if (windowSystem.GetWindow(TWindowNames.GuideEditor) is EditorWindow editorWindow)
+                    if (windowManager.GetWindow(TWindowNames.GuideEditor) is EditorWindow editorWindow)
                     {
                         editorWindow.IsOpen = !editorWindow.IsOpen;
                     }
 
                     break;
                 case GuideViewerCommand:
-                    if (windowSystem.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow guideViewerScreen)
+                    if (windowManager.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow guideViewerScreen)
                     {
                         guideViewerScreen.IsOpen = !guideViewerScreen.IsOpen;
                     }
