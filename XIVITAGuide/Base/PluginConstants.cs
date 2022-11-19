@@ -48,6 +48,6 @@ namespace XIVITAGuide.Base
         /// <summary>
         ///    The fallback language to use if the user's language is not supported for localization (ISO 639-1 code).
         /// </summary>
-        internal static readonly string FallbackLanguage = "en";
+        internal static readonly string FallbackLanguage = "it";
     }
 }

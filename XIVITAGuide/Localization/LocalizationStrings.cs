@@ -111,9 +111,9 @@ namespace XIVITAGuide.Localization
         internal static string LockWindowMovement => Loc.Localize("GuideViewer.LockWindowMovement", "Lock window");
         internal static string ToggleSettingsWindow => Loc.Localize("GuideViewer.ToggleSettingsWindow", "Toggle settings window");
         internal static string GuideHeading(string guideName) => string.Format(Loc.Localize("GuideViewer.GuideHeading", "Guide for {0}"), guideName);
-        internal static string NoGuideSelected => Loc.Localize("GuideViewer.NoGuideSelected", "No guide selected, use /kikolist to see all available guides.");
+        internal static string NoGuideSelected => Loc.Localize("GuideViewer.NoGuideSelected", "No guide selected, use /xivita-list to see all available guides.");
         internal static string GuideNotUnlocked => Loc.Localize("GuideViewer.GuideInfoNotUnlocked", "You cannot view the guide for this duty as you have not unlocked it yet.");
-        internal static string GuideAvailableForDuty => Loc.Localize("GuideViewer.GuideAvailableForDuty", "A guide is available for this duty, use /kikoinfo to view it.");
+        internal static string GuideAvailableForDuty => Loc.Localize("GuideViewer.GuideAvailableForDuty", "A guide is available for this duty, use /xivita-info to view it.");
         internal static string Lore => Loc.Localize("GuideViewer.Lore", "Lore");
     }
 
