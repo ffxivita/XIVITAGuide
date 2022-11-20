@@ -6,20 +6,18 @@
   "Expansion": 0,
   "Level": 15,
   "UnlockQuestID": 66211,
-  "TerritoryIDs": [
-    1036
-  ],
+  "TerritoryIDs": [1036],
   "Sections": [
     {
       "Type": 0,
       "Name": "Chopper",
       "Phases": [
         {
-          "Strategy": "Avoid being hit by \"Charged Whisker\" which is an AoE that inflicts paralysis.",
+          "Strategy": "Evitate di venire colpiti da \"Charged Whisker\" cche è una AoE che inflgge paralisi.",
           "Mechanics": [
             {
               "Name": "Charged Whisker",
-              "Description": "Inflicts paralysis to all players hit.",
+              "Description": "Infligge paralisi a tutti i player colpiti.",
               "Type": 2
             }
           ]
@@ -31,7 +29,7 @@
       "Name": "Captain Madison",
       "Phases": [
         {
-          "Strategy": "You must defeat Captain Madison twice. In the first encounter, kill adds first and then focus on the boss until they run away. In the second encounter they will summon guard dogs at 50% HP, kill these and attack until they flees."
+          "Strategy": "Dovrete affrontatre Captain Madison due volte. Nel primo scontro, uccidete prima adds e poi concentratevi sul boss finchè non fugge. Nel secondo scontro chiamerà a sè dei cani da guardia quando è al 50% di HP. Uccideteli e atttaccate Madison."
         }
       ]
     },
@@ -40,7 +38,7 @@
       "Name": "Denn the Orcatoothed",
       "Phases": [
         {
-          "Strategy": "During the boss fight, adds will spawn from the bubbling water, interact with the grate when it's bubbling to prevent spawning. These can also be safely ignored if enough damage is being dealt to the boss."
+          "Strategy": "Durnte il fight, sbucheranno degli add da dei pozzetti contrassegnati da delle bolle d'acqua. Interagite con la grata per evitare lo spawn. Questi add possono essere tranquillamente ignorati se viene fatto abbastanza danno al boss."
         }
       ]
     }
