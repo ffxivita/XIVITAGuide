@@ -13,7 +13,7 @@
       "Name": "Chopper",
       "Phases": [
         {
-          "Strategy": "Evitate di venire colpiti da \"Charged Whisker\" cche è una AoE che inflgge paralisi.",
+          "Strategy": "Evitate di venire colpiti da \"Charged Whisker\" che è una AoE che inflgge paralisi.",
           "Mechanics": [
             {
               "Name": "Charged Whisker",
