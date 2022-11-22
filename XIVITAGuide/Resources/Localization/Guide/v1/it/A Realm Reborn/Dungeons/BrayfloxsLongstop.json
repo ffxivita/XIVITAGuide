@@ -15,7 +15,7 @@
       "Name": "Great Yellow Pelican",
       "Phases": [
         {
-          "Strategy": "During the fight, Pelican will summon small birds called Violet Back. Kill the birds quickly before they overwhelm the party. Additionally, the Pelican can poison the tank."
+          "Strategy": "Durante il fight, Pelican chiamerà a se degli add chiamati Violet Back. Uccideteli il prima possibile. In aggiunta, Pelican può avvelenare il tank."
         }
       ]
     },
@@ -24,7 +24,7 @@
       "Name": "Inferno Drake",
       "Phases": [
         {
-          "Strategy": "Inferno Drake is a fire-breathing drake. It has an AoE cone attack that should be avoided by casters and melee dps. Halfway through the way, Brayflox will run into the boss room with a drake named Tempest Biast, chasing him. Kill the smaller drake, save Brayflox, then kill the Inferno Drake."
+          "Strategy": "Inferno Drake, come dice il nome, è un drago di fuoco. Ha un attacco AoE conico che deve essere scansato dai caster e dai melee. Verso metà fight, Brayflox, farà la sua comparsa inseguito da un drago chiamato Tempest Biast. Uccidete il drago, salvate Brayflox, poi occupatevi del boss originario."
         }
       ]
     },
@@ -33,16 +33,16 @@
       "Name": "Hellbender",
       "Phases": [
         {
-          "Strategy": "Hellbender is a giant amphibian creature. During the fight, it will periodically crowd control a party member in a bubble. Kill the bubble quickly and free your teammate. At the end of Hellbender's lifespan, Aiatar, the dragon, flies in and consumes the amphibian. Attack Aiatar until his HP is about 50%%, then it will fly away."
+          "Strategy": "Hellbender è una creatura anfibia gigante. Durante il fight, imprigionerà un membro del party dentro ad una bolla. Fate scoppiare quella bolla e liberate il mebro imprigionato. Verso la fine della vita di Hellbender, Aiatar, il drago, atterra e consuma la creatura. Attaccate Aiatar fino a circa 50%% dei suoi HP, poi volerà via."
         }
       ]
     },
     {
       "Type": 0,
-      "Name": "Deep Jungle Coeurl (Optional)",
+      "Name": "Deep Jungle Coeurl (Opzionale)",
       "Phases": [
         {
-          "Strategy": "Deep Jungle Coeurl is an optional mini-boss and is a coeurl with an AoE attack. Be sure to run out of the big red circle on the ground to avoid it."
+          "Strategy": "Deep Jungle Coeurl è un mini-boss opzionale con un attacco AoE. Non state dentro al cerchio rosso per terra."
         }
       ]
     },
@@ -51,7 +51,7 @@
       "Name": "Aiatar",
       "Phases": [
         {
-          "Strategy": "Aiatar has an AoE cone attack that happens fairly quickly and should be avoided by the squishier members of the party. During the fight, the dragon will spit green poisonous goo at members of the party, dealing a moderate amount of damage. The goo leaves a green puddle on the ground which not only poisons anyone standing in it, but also heals the dragon. Get out of the puddle quickly. Tank should make sure that Aiatar is not standing in the puddle and getting healed."
+          "Strategy": "Aiatar ha una AoE conica che dovrebbe essere evitata ad ogni costo. Durante il fight, il drago sputerà delle pozze verde velenose verso i membri del party, facendo un danno moderato. Le pozze verdi sul terrenp, oltre ad essere estremamente velenose, cureranno anche il boss. Se vi dovestre ritrovare sopra una di queste pozze, uscite subito. Il Tank deve fare in modo che Aiatar non stia sopra una di quelle pozze."
         }
       ]
     }
