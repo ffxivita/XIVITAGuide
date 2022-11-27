@@ -18,22 +18,22 @@
           "Mechanics": [
             {
               "Name": "Ceruleum Vent",
-              "Description": "Unavoidable raidwide damage",
+              "Description": "Danno AoE raidwide inevitabile",
               "Type": 4
             },
             {
               "Name": "Prototype Laser Alpha",
-              "Description": "Four circle AoEs will appear from the center and move toward the outside of the arena",
+              "Description": "Quattro AoE circolari appariranno dal centro e si muoveranno verso l'esterno dell'arena",
               "Type": 2
             },
             {
               "Name": "Prototype Laser Beta",
-              "Description": "Circle AoEs will be placed on every player, requiring them to spread out",
+              "Description": "AoE circolari posizionate sotto ogni giocatore. Richiedono lo spread",
               "Type": 2
             },
             {
               "Name": "Grand Sword",
-              "Description": "A cone AoE targeting a random player",
+              "Description": "AoE conico che punta un player random",
               "Type": 2
             }
           ]
@@ -45,40 +45,40 @@
       "Name": "Nero tol Scaeva",
       "Phases": [
         {
-          "Strategy": "There is an electrical field on the outside of the arena, giving people the debuff Electrocution that deals damage over time",
+          "Strategy": "Un campo elettrico all'esterno dell'arena che inflgge alle persone il debuff Electrocution che infligge danni nel tempo",
           "Mechanics": [
             {
               "Name": "Spine Shatter",
-              "Description": "Large damage on the primary target",
+              "Description": "Grande danno al bersaglio principale",
               "Type": 0
             },
             {
               "Name": "Iron Uprising",
-              "Description": " A frontal cone AoE that knocks players back",
+              "Description": " Un cono AoE frontale che respinge i giocatori",
               "Type": 2
             },
             {
               "Name": "Activate",
-              "Description": "Summons a Magitek Death Claw that tethers to one player and slowly moves towards them, knocking player back when it gets to them",
+              "Description": "Evoca un Magitek Death Claw che si collega ad un giocatore e si muove verso di esso respingendolo",
               "Type": 7
             },
             {
               "Name": "Augmented Shatter",
-              "Description": "A stack on a random player, followed by Wheel of Suffering",
+              "Description": "Stack su un giocatore random, seguida da Wheel of Suffering",
               "Type": 3
             },
             {
               "Name": "Wheel of Suffering",
-              "Description": "A circle AoE that deals damage to all players near the boss",
+              "Description": "AoE circolare che arreca danno a tutti i giocatori attorno al boss",
               "Type": 2
             },
             {
               "Name": "Augmented Uprising",
-              "Description": "Hops to one side of the arena and casts a cone AoE that"
+              "Description": "Salta verso un lato dell'arena e casta una AoE conica"
             },
             {
               "Name": "Augmented Suffering",
-              "Description": "Jumps to the center and cast a knockback attack",
+              "Description": "Salta verso il centro e lancia un attacco knockback",
               "Type": 2
             }
           ]
@@ -90,46 +90,46 @@
       "Name": "Gaius van Baelsar",
       "Phases": [
         {
-          "Strategy": "At 5%% HP, Gaius will summon 4 Phantom Gaius adds that must be taken out while he charges up Blade Energy for his ultimate attack \"Veni Vidi Vici\", which will instantly kill the party if energy reaches 100%",
+          "Strategy": "Al 5%% di HP, Gaius evochera altri 4 Gaius fantasma come add che dovranno essere uccisi nel mentre sta caricando Blade Energy per il suo attacco finale \"Veni Vidi Vici\", che ucciderà completamente il party se raggiungerà il 100%% di carica",
           "Mechanics": [
             {
               "Name": "Innocence",
-              "Description": "Large damage on the primary target",
+              "Description": "Danno grave al bersaglio primario",
               "Type": 0
             },
             {
               "Name": "Horrida Bella",
-              "Description": "Unavoidable raidwide damage",
+              "Description": "Danno AoE raidwide inevitabile",
               "Type": 4
             },
             {
               "Name": "Terminus Est",
-              "Description": "Fires flaming Xs, which will spawn a line AoE infront of them after a few seconds",
+              "Description": "Spara delle X fiammeggianti, che genereranno delle AoE lineari dopo pochi secondi",
               "Type": 2
             },
             {
               "Name": "Phantasmata",
-              "Description": "Clones of Gaius will appear on the long side of the arena and each will cast Terminus Est",
+              "Description": "Cloni di di Gaius appariranno nel lato lungo dell'arena e ognuno di loro casterà Terminus Est",
               "Type": 7
             },
             {
               "Name": "Festina Lente",
-              "Description": "Stack marker on a random player",
+              "Description": "Marker di Stack su un giocatore casuale",
               "Type": 3
             },
             {
               "Name": "Ductus",
-              "Description": "Three circular AoEs appear on the short side of the arena and move along the length of the platform",
+              "Description": "Tre AoE circolari appariranno sul lato corto dell'arena e si muoveranno lungo la lunghezza della piattaforma",
               "Type": 2
             },
             {
               "Name": "Hand of the Empire",
-              "Description": "Each player will be marked by an unavoidable circle AoE",
+              "Description": "Ogni giocatore sarà contrassegnato da una AoE circolare che non potrà evitare",
               "Type": 2
             },
             {
               "Name": "Heirsbane (Phantom)",
-              "Description": "Targets a random player, dealing damage to them"
+              "Description": "Targhetta un giocatore casuale, infliggendogli danni"
             }
           ]
         }
