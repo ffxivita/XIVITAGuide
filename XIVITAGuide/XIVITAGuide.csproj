@@ -38,7 +38,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(IsCI)' == 'true'">
-      <DalamudLibPath>Dalamud</DalamudLibPath>
+    <DalamudLibPath>Dalamud</DalamudLibPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -71,9 +71,9 @@
       <HintPath>$(DalamudLibPath)Lumina.Excel.dll</HintPath>
       <Private>false</Private>
     </Reference>
-	  <Reference Include="CheapLoc">
-		  <Private>false</Private>
-		  <HintPath>$(DalamudLibPath)CheapLoc.dll</HintPath>
-	  </Reference>
+    <Reference Include="CheapLoc">
+      <Private>false</Private>
+      <HintPath>$(DalamudLibPath)CheapLoc.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
