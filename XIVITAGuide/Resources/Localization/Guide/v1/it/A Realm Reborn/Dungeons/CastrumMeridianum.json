@@ -20,22 +20,22 @@
           "Mechanics": [
             {
               "Name": "Incendiary Support",
-              "Description": "Arrecac danno raidwide per 3 volte consecutive",
+              "Description": "Infligge 3 colpi di danno raidwide",
               "Type": 6
             },
             {
               "Name": "Request Assistance",
-              "Description": "Evoca altri soldati imperiali nel fight",
+              "Description": "Evoca ulteriori soldati imperiali nella battaglia",
               "Type": 7
             },
             {
               "Name": "Magitek Cannon",
-              "Description": "AoE circolare che attacca un player a caso",
+              "Description": "Attacco AoE circolare che colpisce un giocatore casuale",
               "Type": 2
             },
             {
               "Name": "High-powered Magitek Ray",
-              "Description": "Attacco lienare che arreca danno a tutti coloro che sono nella sua linea di tiro.",
+              "Description": "Attacco lineare che infligge danno a chiunque sia nella linea di tiro del boss.",
               "Type": 6
             }
           ]
@@ -52,7 +52,7 @@
           "Mechanics": [
             {
               "Name": "Cermet Dril",
-              "Description": "Danno moderato single-target",
+              "Description": "Grande quantità di danno single-target",
               "Type": 0
             },
             {
@@ -62,17 +62,17 @@
             },
             {
               "Name": "Hypercharge",
-              "Description": "Si riposiziona al centro e sparea un AoE ciroclare a ciambella",
+              "Description": "Si riposiziona al centro dell'arena e spara AoE circolari a ciambella",
               "Type": 2
             },
             {
               "Name": "Overcharge",
-              "Description": "Cono frontale AoE che infligge una grossa quantità di danno e ingligge lo status Paralysis",
+              "Description": "AoE frontale di tipo conico che arreca grandi quantità di danni e infligge lo status Paralysis",
               "Type": 2
             },
             {
               "Name": "Targeted Support",
-              "Description": "AoE a tempo sopra le teste dei giocatori",
+              "Description": "AoE a tempo sopra la testa dei gicocatori",
               "Type": 2
             }
           ]
@@ -89,32 +89,32 @@
           "Mechanics": [
             {
               "Name": "Aglaia Climb",
-              "Description": "Danno single-target moderato",
+              "Description": "Grande quantità di danno single-target",
               "Type": 0
             },
             {
               "Name": "Artificial Plasma",
-              "Description": "Danno invevitabile raidwide che deve essere curato il prima possibile",
+              "Description": "Danno raidwide inevitabile che deve essere curato",
               "Type": 4
             },
             {
               "Name": "Roundhouse",
-              "Description": "Si riposiziona al centro e casta una AoE circolare seguita da 8 AoE ai bordi",
+              "Description": "Si riposiziona al centro dell'Arena e casta una AoE circolare seguita da 8 AoE ai bordi dell'arena",
               "Type": 2
             },
             {
               "Name": "Infinite Reach",
-              "Description": "Sequenza di AoE lineari che partono dal centro seguito da 6 AoE circolari ai lati della stessa. Esplodono in ordine di apparizione",
+              "Description": "Squenza di una grande AoE lineare che parte dal centro dell'arena seguita da 6 AoE circolari ai lati. Esplodno in ordine di apparizione",
               "Type": 2
             },
             {
               "Name": "Thermobaric Strike",
-              "Description": "Preparazione di \"Stunning Sweep\" o \"Angry Salamander\"",
+              "Description": "Castato in preparazione di \"Stunning Sweep\" o \"Angry Salamander\"",
               "Type": 10
             },
             {
               "Name": "Artificial Boost",
-              "Description": "Incrementa la resistenza al danno",
+              "Description": "Aumenta la resistenza ai danni",
               "Type": 10
             }
           ]
