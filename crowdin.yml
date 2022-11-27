@@ -1,4 +1,5 @@
-commit_message: "Chore: Localization updates for %original_file_name% [no ci]"
+pull_request_title: "chore(i18n): Translation updates (Crowdin)"
+commit_message: "chore(i18n): translations updates for %two_letters_code% [skip ci]"
 append_commit_message: false
 
 files:
