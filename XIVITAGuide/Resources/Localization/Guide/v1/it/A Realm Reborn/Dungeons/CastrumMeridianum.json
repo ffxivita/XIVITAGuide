@@ -20,22 +20,22 @@
           "Mechanics": [
             {
               "Name": "Incendiary Support",
-              "Description": "Deals 3 hits of raidwide damage",
+              "Description": "Arrecac danno raidwide per 3 volte consecutive",
               "Type": 6
             },
             {
               "Name": "Request Assistance",
-              "Description": "Summons additional imperial soldiers to the battle",
+              "Description": "Evoca altri soldati imperiali nel fight",
               "Type": 7
             },
             {
               "Name": "Magitek Cannon",
-              "Description": "Circular AoE attack that targets a random player",
+              "Description": "AoE circolare che attacca un player a caso",
               "Type": 2
             },
             {
               "Name": "High-powered Magitek Ray",
-              "Description": "Untelegraphed line attack that deals damage to all players directly in front of the boss.",
+              "Description": "Attacco lienare che arreca danno a tutti coloro che sono nella sua linea di tiro.",
               "Type": 6
             }
           ]
@@ -52,27 +52,27 @@
           "Mechanics": [
             {
               "Name": "Cermet Dril",
-              "Description": "Large amount of single-target damage",
+              "Description": "Danno moderato single-target",
               "Type": 0
             },
             {
               "Name": "Thermobaric Strike",
-              "Description": "Places a flare in a random corner of the arena doing damage the closer you are to it",
+              "Description": "Piazza un segnalino in un bordo e arreca danno a chiunque gli si avvicini",
               "Type": 2
             },
             {
               "Name": "Hypercharge",
-              "Description": "Repositions at the center of the arena and fires adonut AoE and circle AoE",
+              "Description": "Si riposiziona al centro e sparea un AoE ciroclare a ciambella",
               "Type": 2
             },
             {
               "Name": "Overcharge",
-              "Description": "A frontal cone AoE attack that deals heavy amount of damage and inflicts the debuff Paralysis",
+              "Description": "Cono frontale AoE che infligge una grossa quantità di danno e ingligge lo status Paralysis",
               "Type": 2
             },
             {
               "Name": "Targeted Support",
-              "Description": "Timed AoE ontop of all players",
+              "Description": "AoE a tempo sopra le teste dei giocatori",
               "Type": 2
             }
           ]
@@ -89,32 +89,32 @@
           "Mechanics": [
             {
               "Name": "Aglaia Climb",
-              "Description": "Large amount of single-target damage",
+              "Description": "Danno single-target moderato",
               "Type": 0
             },
             {
               "Name": "Artificial Plasma",
-              "Description": "Unavoidable raidwide damage that must be healed",
+              "Description": "Danno invevitabile raidwide che deve essere curato il prima possibile",
               "Type": 4
             },
             {
               "Name": "Roundhouse",
-              "Description": "Reposition to the center of the Arena and casts a circle AoE followed by 8 AoEs on the border of the arena",
+              "Description": "Si riposiziona al centro e casta una AoE circolare seguita da 8 AoE ai bordi",
               "Type": 2
             },
             {
               "Name": "Infinite Reach",
-              "Description": "Sequence of a large line AoE down the center of the arena followed by 6 circle AoEs on the sides of it, exploding in order of appearance",
+              "Description": "Sequenza di AoE lineari che partono dal centro seguito da 6 AoE circolari ai lati della stessa. Esplodono in ordine di apparizione",
               "Type": 2
             },
             {
               "Name": "Thermobaric Strike",
-              "Description": "Casted in preparation of \"Stunning Sweep\" or \"Angry Salamander\"",
+              "Description": "Preparazione di \"Stunning Sweep\" o \"Angry Salamander\"",
               "Type": 10
             },
             {
               "Name": "Artificial Boost",
-              "Description": "Increases damage resistance",
+              "Description": "Incrementa la resistenza al danno",
               "Type": 10
             }
           ]
