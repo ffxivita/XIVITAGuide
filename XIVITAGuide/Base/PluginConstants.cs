@@ -33,7 +33,7 @@ namespace XIVITAGuide.Base
         /// <summary>
         ///     The support button URL.
         /// </summary>
-        internal static readonly string DonateButtonUrl = "https://paypal.me/ffxivita";
+        internal static readonly string DonateButtonUrl = "https://github.com/sponsors/DarkArtek";
 
         /// <summary>
         ///     The path to the plugin's resources folder with trailing slashes, relative to the plugin assembly location with trailing slashes.
@@ -48,6 +48,6 @@ namespace XIVITAGuide.Base
         /// <summary>
         ///    The fallback language to use if the user's language is not supported for localization (ISO 639-1 code).
         /// </summary>
-        internal static readonly string FallbackLanguage = "en";
+        internal static readonly string FallbackLanguage = "it";
     }
 }
