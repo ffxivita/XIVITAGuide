@@ -8,12 +8,13 @@
             "assignees": ["HsinVega842", "DarkArtek"]
         },
         {
-            "matchPackagePatterns": ["**.json"],
-            "reviewers": ["Hikuch", "DarkArtek"],
-            "assignees": ["Hikuch", "DarkArtek"]
+            "excludeCommitPaths": ["XIVITAGuide/XIVITAGuide.json"]
         },
         {
-            "excludeCommitPaths": ["XIVITAGuide/XIVITAGuide.json"]
+            "matchSourceUrls": ["https://github.com/ffxivita/XIVITAGuide/tree/main/XIVITAGuide/Resources/Localization/Guide/v1/it"],
+            "labels": ["i18n"],
+            "reviewers": ["hikuch", "DarkArtek"],
+            "assignees": ["hikuch", "DarkArtek"]
         }
     ]
 }
