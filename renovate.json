@@ -15,6 +15,11 @@
             "labels": ["i18n"],
             "reviewers": ["hikuch", "DarkArtek"],
             "assignees": ["hikuch", "DarkArtek"]
+        },
+        {
+            "matchPaths": ["**/Resources/Localization/Guide/v1/it/**"],
+            "assignees": ["hikuch", "DarkArtek"],
+            "enabled": true
         }
     ]
 }
