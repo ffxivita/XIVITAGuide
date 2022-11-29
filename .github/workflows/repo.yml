@@ -69,7 +69,7 @@ jobs:
           path: plugins/${{ env.INTERNAL_NAME }}
           pathspec_error_handling: exitImmediately
       - name: Commit
-        uses: EndBug/add-and-commit@v7
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: Priscilla(XIVITA)
           author_email: noreply@ahd-creative.agency
