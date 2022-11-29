@@ -13,63 +13,65 @@ env:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
 
 jobs:
-  build:
-    runs-on: windows-2022
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        submodules: recursive
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.0.2
-    - name: Download Dalamud
-      run: |
-        Invoke-WebRequest -Uri https://goatcorp.github.io/dalamud-distrib/latest.zip -OutFile latest.zip
-        Expand-Archive -Force latest.zip "$env:AppData\XIVLauncher\addon\Hooks\dev\"
-    - name: Build
-      run: |
-        dotnet restore -r win ${{ env.SOLUTION_NAME }}.sln
-        dotnet build ${{ env.SOLUTION_NAME }}.sln --configuration Release --no-restore
-    - name: Upload build
-      uses: actions/upload-artifact@v2
-      with:
-        name: PluginRepoZip
-        path: ${{ env.RELEASE_DIR }}
-        if-no-files-found: error
-        retention-days: 1
-    - name: Tag build
-      run: |
-        buildVersion=$(jq -j .AssemblyVersion "${{ env.RELEASE_DIR }}/${{ env.SOLUTION_NAME }}.json")
-        git tag -am "[Automated build $buildVersion]" "v$buildVersion"
-        git push origin "v$buildVersion"
-      shell: bash
-      env:
-        GIT_AUTHOR_NAME: Priscilla
-        GIT_COMMITTER_NAME: Priscilla
-        GIT_AUTHOR_EMAIL: noreply@ahd-creative.agency
-        GIT_COMMITTER_EMAIL: noreply@ahd-creative.agency
-
-  deploy:
-    needs: build
+  BuildPlugin:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        ref: main
-        repository: ${{ env.XIVITA_REPO_URL }}
-        token: ${{ secrets.PAT }}
-    - name: Download build
-      uses: actions/download-artifact@v2
-      with:
-        name: PluginRepoZip
-        path: plugins/${{ env.INTERNAL_NAME }}
-    - name: Commit
-      uses: EndBug/add-and-commit@v7
-      with:
-        add: plugins/
-        branch: main
-        pathspec_error_handling: exitImmediately
-        author_name: Priscilla
-        author_email: noreply@ahd-creative.agency
-        message: Update ${{ env.INTERNAL_NAME }}
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Download Dalamud Library
+        run: |
+          wget https://goatcorp.github.io/dalamud-distrib/latest.zip -O /tmp/dalamud.zip
+          unzip /tmp/dalamud.zip -d /tmp/dalamud
+
+      - name: Get Tag Name
+        id: tag_name
+        shell: bash
+        run: >-
+          echo "::set-output name=TAG::$(echo ${{ github.ref }} | sed 's/refs\/tags\///' | sed 's/v//')"
+
+      - name: Build Plugin
+        shell: bash
+        run: |
+          dotnet build --configuration Release --nologo -p:AssemblyVersion=${{ steps.tag_name.outputs.TAG }} -p:AssemblyInformationalVersion=${{ steps.tag_name }}
+          sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/latest.zip  >> checksums.txt
+          sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/XIVITAGuide.json >> checksums.txt
+          cat checksums.txt
+        env:
+          DALAMUD_HOME: /tmp/dalamud
+          IsCI: true
+
+  Upload:
+    needs: BuildPlugin
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          add: plugins/
+          ref: main
+          repository: ${{ env.XIVITA_REPO_URL }}
+          token: ${{ secrets.PAT }}
+      - name: Download
+        uses: actions/download-artifact@v2
+        with:
+          name: XIVITAGuide
+          path: plugins/${{ env.INTERNAL_NAME }}
+          pathspec_error_handling: exitImmediately
+      - name: Commit
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Priscilla(XIVITA)
+          author_email: noreply@ahd-creative.agency
+          message: Aggiornamento di ${{ env.INTERNAL_NAME }} pronto!
+    
