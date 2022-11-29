@@ -2,8 +2,8 @@
 
 on:
   push:
-    tags:
-      - "v*.*.*.*"
+    branch:
+      - main
 
 env:
   SOLUTION_NAME: XIVITAGuide
@@ -55,7 +55,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-         - ref: 'v*.*.*.*'
          - repository: ${{ env.XIVITA_REPO_URL }}
          - token: ${{ secrets.PAT }}
       - name: Download Build
