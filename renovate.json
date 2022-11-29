@@ -6,6 +6,14 @@
             "matchPackagePatterns": ["*"],
             "reviewers": ["HsinVega842", "DarkArtek"],
             "assignees": ["HsinVega842", "DarkArtek"]
+        },
+        {
+            "matchPackagePatterns": ["*.json"],
+            "reviewers": ["Hikuch", "DarkArtek"],
+            "assignees": ["Hikuch", "DarkArtek"]
+        },
+        {
+            "excludeCommitPaths": ["XIVITAGuide/XIVITAGuide.json"]
         }
     ]
 }
