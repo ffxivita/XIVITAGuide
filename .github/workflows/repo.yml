@@ -62,7 +62,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          add: plugins/
+          path: plugins/
           repository: ${{ env.XIVITA_REPO_URL }}
           token: ${{ secrets.PAT }}
           ref: ${{ github.event.pull_request.head.ref }}
