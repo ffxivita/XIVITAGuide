@@ -8,7 +8,7 @@
             "assignees": ["HsinVega842", "DarkArtek"]
         },
         {
-            "matchPackagePatterns": ["*.json"],
+            "matchPackagePatterns": ["**.json"],
             "reviewers": ["Hikuch", "DarkArtek"],
             "assignees": ["Hikuch", "DarkArtek"]
         },
