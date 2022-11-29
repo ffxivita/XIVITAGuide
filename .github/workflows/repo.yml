@@ -1,17 +1,15 @@
+---
 name: Build & Deploy
-
 on:
   push:
     tags:
-      - "v*.*.*.*"
-
+      - v*.*.*.*
 env:
   SOLUTION_NAME: XIVITAGuide
   INTERNAL_NAME: XIVITAGuide
   RELEASE_DIR: XIVITAGuide/bin/x64/Release/XIVITAGuide
   XIVITA_REPO_URL: ffxivita/DalamudPlugins
   DOTNET_CLI_TELEMETRY_OPTOUT: true
-
 jobs:
   BuildPlugin:
     runs-on: ubuntu-latest
@@ -20,43 +18,43 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
       - name: Set up .NET
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.0.x
-
       - name: Restore Dependencies
         run: dotnet restore
-
       - name: Download Dalamud Library
-        run: |
-          wget https://goatcorp.github.io/dalamud-distrib/latest.zip -O /tmp/dalamud.zip
-          unzip /tmp/dalamud.zip -d /tmp/dalamud
+        run: >
+          wget https://goatcorp.github.io/dalamud-distrib/latest.zip -O
+          /tmp/dalamud.zip
 
+          unzip /tmp/dalamud.zip -d /tmp/dalamud
       - name: Get Tag Name
         id: tag_name
         shell: bash
-        run: >-
-          echo "::set-output name=TAG::$(echo ${{ github.ref }} | sed 's/refs\/tags\///' | sed 's/v//')"
-
+        run: echo "::set-output name=TAG::$(echo ${{ github.ref }} | sed
+          's/refs\/tags\///' | sed 's/v//')"
       - name: Build Plugin
         shell: bash
-        run: |
-          dotnet build --configuration Release --nologo -p:AssemblyVersion=${{ steps.tag_name.outputs.TAG }} -p:AssemblyInformationalVersion=${{ steps.tag_name }}
+        run: >
+          dotnet build --configuration Release --nologo -p:AssemblyVersion=${{
+          steps.tag_name.outputs.TAG }} -p:AssemblyInformationalVersion=${{
+          steps.tag_name }}
+
           sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/latest.zip  >> checksums.txt
+
           sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/XIVITAGuide.json >> checksums.txt
+
           cat checksums.txt
         env:
           DALAMUD_HOME: /tmp/dalamud
           IsCI: true
-      
       - name: UploadArtifact
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.INTERNAL_NAME }}
           path: ${{ env.RELEASE_DIR }}
-  
   Upload:
     needs: BuildPlugin
     runs-on: ubuntu-latest
@@ -67,6 +65,7 @@ jobs:
           add: plugins/
           repository: ${{ env.XIVITA_REPO_URL }}
           token: ${{ secrets.PAT }}
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Download
         uses: actions/download-artifact@v2
         with:
@@ -79,4 +78,3 @@ jobs:
           author_name: Priscilla(XIVITA)
           author_email: noreply@ahd-creative.agency
           message: Aggiornamento di ${{ env.INTERNAL_NAME }} pronto!
-    
