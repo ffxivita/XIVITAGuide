@@ -67,13 +67,13 @@ jobs:
           token: ${{ secrets.PAT }}
           ref: ${{ github.event.pull_request.head.ref }}
       - name: Download
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: XIVITAGuide
           paths: plugins/${{ env.INTERNAL_NAME }}
           pathspec_error_handling: exitImmediately
       - name: Commit
-        uses: EndBug/add-and-commit@v7
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: Priscilla(XIVITA)
           author_email: noreply@ahd-creative.agency
