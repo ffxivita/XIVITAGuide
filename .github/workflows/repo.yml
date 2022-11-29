@@ -1,9 +1,9 @@
-﻿name: Build & Deploy
+name: Build & Deploy
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*.*.*.*"
 
 env:
   SOLUTION_NAME: XIVITAGuide
