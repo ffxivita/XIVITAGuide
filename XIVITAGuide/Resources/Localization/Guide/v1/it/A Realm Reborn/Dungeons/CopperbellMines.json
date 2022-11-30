@@ -15,26 +15,26 @@
       "Name": "Kottos the Gigas",
       "Phases": [
         {
-          "Strategy": "Every so often Kottos will jump to 3 areas with a massive circle AoE, move to a safe spot to avoid this.",
+          "Strategy": "Ogni tanto Kottos salta in due aree con un enorme AoE circolare, spostarsi in un posto sicuro per evitarli.",
           "Mechanics": [
             {
               "Name": "Grand Slam",
-              "Description": "Deals a large amount of damage to the main target.",
+              "Description": "Infligge un grande quantitativo di danni al target principale.",
               "Type": 0
             },
             {
               "Name": "Lumbering Leap",
-              "Description": "Kottos will jump to 3 areas, causing a massive circle AoE to appear at the location.",
+              "Description": "Kottos salta in 3 zone, causando un enorme AoE circolare per apparire sul posto.",
               "Type": 2
             },
             {
               "Name": "Colossal Slam",
-              "Description": "A large cone AoE targeted on a random player.",
+              "Description": "AoE conico che punta ad un giocatore random.",
               "Type": 2
             },
             {
               "Name": "Catapult",
-              "Description": "Kottos will throw a rock at a random player.",
+              "Description": "Kottos lancia una roccia ad un giocatore a caso.",
               "Type": 6
             }
           ]
@@ -46,21 +46,21 @@
       "Name": "Ichorous Ire",
       "Phases": [
         {
-          "Strategy": "Will occasionally split off into multiple Ichorous Drips below 50%% HP, which will each explode after a short time.",
+          "Strategy": "Ogni tanto si divide in più Ichorous Drips sotto il 50% di HP, che esploderanno dopo poco tempo.",
           "Mechanics": [
             {
               "Name": "Fluid Spread",
-              "Description": "Deals a large amount of damage to the main target.",
+              "Description": "Provoca un enorme quantitativo di danno sul target principale.",
               "Type": 0
             },
             {
               "Name": "Syrup",
-              "Description": "AoEs appear below all players",
+              "Description": "Delle AoE appaiono sotto tutti i giocatori",
               "Type": 2
             },
             {
               "Name": "Divide",
-              "Description": "Split into Ichorous Drips, casting an AoE on each one.",
+              "Description": "Si divide in altri Ichorous Drips, castando una AoE su ciascuno.",
               "Type": 2
             }
           ]
@@ -72,26 +72,26 @@
       "Name": "Gyges the Great",
       "Phases": [
         {
-          "Strategy": "Will occasionally split off into multiple Ichorous Drips below 50%% HP, which will each explode after a short time.",
+          "Strategy": "Ogni tanto si divide in diversi Ichorous Drips sotto il 50% di HP, che esploderanno dopo poco.",
           "Mechanics": [
             {
               "Name": "Grand Slam",
-              "Description": "Deals a large amount of damage to the main target.",
+              "Description": "Provoca un enorme quantitativo di danno sul target principale.",
               "Type": 0
             },
             {
               "Name": "Gigantic Swing",
-              "Description": "Donut AoE centered on the boss. Move into the boss' hitbox to avoid damage.",
+              "Description": "AoE a ciambella sul boss. Muoversi nella hitbox del boss per evitare i danni.",
               "Type": 2
             },
             {
               "Name": "Gigantic Smash",
-              "Description": "Recenters and casts an AoE from the center along with 5 more on the outside of the arena.",
+              "Description": "Torna al centro e casta un'AoE dal centro con altre 5 all'esterno dell'arena.",
               "Type": 2
             },
             {
               "Name": "Colossal Slam",
-              "Description": " A large cone AoE targeted on a random player.",
+              "Description": "AoE conico che mira ad un giocatore a caso.",
               "Type": 2
             }
           ]

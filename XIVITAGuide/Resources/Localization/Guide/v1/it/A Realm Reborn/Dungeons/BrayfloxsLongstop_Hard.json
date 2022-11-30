@@ -15,7 +15,7 @@
       "Name": "Illuminati Commander",
       "Phases": [
         {
-          "Strategy": "Tanks can pick up the Illuminati Snipers by walking through the tethers.\n\nKeep an eye on where you're standing so you aren't boxed in by Bombs.",
+          "Strategy": "Il tank può prendere gli Illuminati Snipers andando verso i tether.\n\nTenete d'occhio dove siete così da non venir colpiti dalle bombe.",
           "Mechanics": [
             {
               "Name": "Goblin Rush",
@@ -24,12 +24,12 @@
             },
             {
               "Name": "Illuminati Sniper",
-              "Description": "Tethers to a random player and shoots them until it dies. If the player dies, will pick a new target. Walking through the tether will cause it to change targets, allowing the tank to pick up the adds. Spawns additional adds as the fight progresses.",
+              "Description": "Collega un giocatore a caso e gli spara finché non muore. Se il giocatore muore, sceglierà un nuovo obiettivo. Camminando verso il tether cambierà target, permettendo al tank di prendere gli add. Genera altri add con l'avanzare del fight.",
               "Type": 7
             },
             {
               "Name": "Bombs",
-              "Description": "Spawns a bomb on the ground somewhere in the arena. Makes a cross shape with 2 long thin line AoEs. Spawns multiple of these at once, with more the longer the fight goes on.",
+              "Description": "Genera una bomba a terra da qualche parte nell'arena. Crea una AoE a croce con 2 lunghe linee sottili. Ne evoca più di una alla volta, con il prolungarsi del fight.",
               "Type": 2
             }
           ]
@@ -41,21 +41,21 @@
       "Name": "Magitek Vangob G-III",
       "Phases": [
         {
-          "Strategy": "Any Ceruleum Puddles that overlap will be affected by Oversurge, so avoid standing in them.\n\nKill the Gliders quickly to lower the damage done by Needle Burst.",
+          "Strategy": "Ogni Cerulum Puddle sovrapposta darà l'effetto di Oversurge, quindi evitate di starci dentro.\n\nUccidete velocemente i Gliders per abbassare il danno provocato da Needle Burst.",
           "Mechanics": [
             {
               "Name": "Drill Cannons",
-              "Description": "Frontal line AoE.",
+              "Description": "AoE in linea frontale.",
               "Type": 2
             },
             {
               "Name": "Illuminati Glider",
-              "Description": "Spawns throughout the fight. Has low health, very easy to burn down. Remaining HP affects the damage of Needle Burst.",
+              "Description": "Si genera durante tutto il fight. Ha salute basse, molto facile da abbattere. Gli HP rimanenti hanno effetto sul danno di Needle Burst.",
               "Type": 7
             },
             {
               "Name": "Ceruleum Puddles / Oversurge",
-              "Description": "Ceruleum Puddles dropped periodically throughout the fight. Will explode when the boss uses Oversurge while standing in them, and the puddles will chain together.",
+              "Description": "Le Ceruleum Puddles cadono periodicamente durante il fight. Esploderanno quando il boss usa Oversurge mentre ci si è sopra, e le pozze si collegheranno insieme.",
               "Type": 2
             }
           ]
@@ -67,26 +67,26 @@
       "Name": "Gobmachine G-VI",
       "Phases": [
         {
-          "Strategy": "Use various AoE abilities to knockback the Bombs during Laps.\n\nKeep an eye on the boss during Giant Bomb so that you know when he is about to charge across the arena.\n\nDPS may opt to LB the Giant Bomb if damage is low or they just want to finish it off quickly.",
+          "Strategy": "Usa varie abilità AoE per respingere le Bombe durante i Laps.\n\nTenete d'occhio il boss durante Giant Bomb così da sapere quando sta per partire alla carica per tutta l'arena.\n\nI DPS possono optare per usare la LB sulla Giant Bomb se il danno è basso o vogliono solo finire più velocemente.",
           "Mechanics": [
             {
               "Name": "Laps",
-              "Description": "The boss will become untargetable and begin making laps around the edge of the arena. Standing in its path will cause the player to take moderate damage and be knocked away.",
+              "Description": "Il boss diventerà intargettabile e comincerà a girare attorno al bordo dell'arena. Stare sul suo percorso provocherà danno moderato sul giocatore che verrà spinto via.",
               "Type": 2
             },
             {
-              "Name": "Adds",
-              "Description": "Spawn during Laps.\n\nIlluminati Sniper\n\tTethers to a random player, same as the first boss.\nIlluminati Soldier\n\tAttacks players and can be aggroed.",
+              "Name": "Add",
+              "Description": "Appaiono durante i Laps.\n\nIlluminati Sniper\n\tSi collega ad un giocatore casuale, come il primo boss.\nIllumati Soldier\n\tAttacca i giocatori e può essere aggrato.",
               "Type": 7
             },
             {
-              "Name": "Bombs",
-              "Description": "Spawn during Laps. Numerous targetable bombs are dropped all around the room. Any damage dealt to them will knock them away from the player. Players should stack in the middle and use various AoEs (both oGCD and GCD) to knock them to the edges of the arena.",
+              "Name": "Bombe",
+              "Description": "Appaiono durante i Laps. Numerose bombe targettabili vengono lanciate in tutta la stanza. Qualsiasi danno provocato le spingerà via dal giocatore. I giocatori devono raggrupparsi al centro ed usare varie AoE (sia oGCD che GCD) per spingerle via verso i bordi dell'arena.",
               "Type": 2
             },
             {
               "Name": "Giant Bomb",
-              "Description": "Spawns towards the end of the fight, after players have dealt with Bombs. During this time, the boss will stop and charge across the center of the arena, dealing damage and knocking players back. Players need to kill the bomb before it explodes; if they fail to do so, the group will wipe.",
+              "Description": "Appare verso la fine del combattimento, dopo che i giocatori avranno affrontato le bombe. Durante questo momento, il boss si fermerà e caricherà verso il centro dell'arena, spingendo indietro i giocatori. I giocatori devono uccidere la bomba prima che esploda; se non fanno in tempo, il gruppo subirà il wipe.",
               "Type": 8
             }
           ]

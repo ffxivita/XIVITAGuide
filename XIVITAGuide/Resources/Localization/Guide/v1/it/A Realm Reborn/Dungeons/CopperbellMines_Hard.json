@@ -15,26 +15,26 @@
       "Name": "Hecatoncheir Mastermind",
       "Phases": [
         {
-          "Strategy": "Pulling the boss to the end of the Flaming Track is the easiest way to deal with this fight with a decent group. Be aware that doing so will spawn all of the upcoming mechanics in sequence instead of over the course of the fight, as they are tied to when the Flaming Track is activated.\n\nThe closer you are to the end of the track, the faster the Flambeau's will use Self-destruct.",
+          "Strategy": "Pullare il boss al bordo del Flaming Track è il modo più semplice per batterlo con un gruppo decente. Va fatta attenzione perché così tutte le meccaniche in arrivo saranno in sequenza invece che nel corso del combattimento, in quanto legate a quando si attiva il Flaming Track.\n\nPiù si è vicini al bordo del tracciato, più veloce sarà l'utilizzo di Self-destruct del Flambeau.",
           "KeyMechanics": [
             {
               "Name": "Mining Dross",
-              "Description": "There are three packs of three slimes each on the wooden track. Group up and AoE down.",
+              "Description": "Ci sono tre gruppi da tre slime ciascuno sul binario di legno. Raggruppatevi e andate di AoE.",
               "Type": 7
             },
             {
               "Name": "Flambeau",
-              "Description": "Moves towards the Flaming Track and begins casting Self-destruct after a few seconds. Must be killed ASAP or it will wipe the group.",
+              "Description": "Si muove sul Flaming Track e comincia a castare Self-destruct dopo pochi secondi. Va ucciso al più presto o è wipe per il gruppo.",
               "Type": 7
             },
             {
               "Name": "Flaming Track",
-              "Description": "The boss will set fire to the floor behind him and beneath him at set intervals OR when he moves past a certain point on the floor.",
+              "Description": "Il boss mette a fuoco il pavimento dietro e sotto di sé ad intervalli O quando si muove verso un certo punto del percorso.",
               "Type": 2
             },
             {
-              "Name": "Hecatoncheir Adds",
-              "Description": "Weak adds that can be burned down quickly.",
+              "Name": "Add di Hecatoncheir",
+              "Description": "Add deboli che si possono bruciare velocemente.",
               "Type": 7
             }
           ]
@@ -46,51 +46,51 @@
       "Name": "Biggy",
       "Phases": [
         {
-          "Strategy": "Tanks should stand apart from the group as the boss will use various AoEs on them while running around the room.\n\nWhen placing the bomb, try to place it a few seconds in front of the boss to ensure that it will hit him. Adjust for when he uses AoEs. Try to wait until there's only a few seconds left on the timer for best chances of hitting him.\n\nIf you have a left over Waymaker Bomb you can use it on Biggy when he emerges from the Rock Suit, instantly finishing him off.",
+          "Strategy": "I tank dovrebbero stare in parte dal gruppo in quanto il boss usa varie AoE su di loro mentre corre intorno alla stanza.\n\nQuando posiziona la bomba, cercate di posizionarla in pochi secondi davanti al boss per essere sicuri che lo colpisca. Regolate per quando usa le AoE. Cercate di aspettare finché non mancano pochi secondi rimasti al timer per avere maggiori possibilità di colpirlo.\n\nSe rimane una Waymaker Bomb potete usarla su Biggy quando emerge dal Rock Suit, finendolo immediatamente.",
           "KeyMechanics": [
             {
               "Name": "Rock Suit",
-              "Description": "The boss spawns wearing a giant rock golem suit to defend himself from damage. Boss takes extremely low damage from player attacks; instead, use Waymaker Bombs to bring him down. After being hit by the first Waymaker Bomb, the boss will run around the room, ignoring aggro. Tanks should continue to hold aggro and stand on the west side of the room, near the exit, to encourage the boss to use its various attacks in their direction so they don't hit the other players.",
+              "Description": "Il boss appare indossando un vestito da golem roccioso gigante per difendersi dal danno. Il boss subisce danni estremamente bassi dagli attacchi dei giocatori; invece, usate le Waymarker Bomb per tirarlo giù. Dopo essere stato colpito dalla prima Waymarker Bomb, il boss corre in giro per tutta la stanza, ignorando l'aggro. I tank devono continuare a tenere l'aggro e stare sul lato ovest della stanza, vicino l'uscita, per incoraggiare il boss ad usare i suoi vari attacchi nella loro direzione così che non colpiscano gli altri giocatori.",
               "Type": 5
             },
             {
               "Name": "Improved Blasting Device",
-              "Description": "Respawns regularly on the east side of the room. Used to spawn Waymaker Bombs somewhere in the room.",
+              "Description": "Riappare regolarmente nel lato est della stanza. Usato per evocare le Waymaker Bomb da qualche parte nella stanza.",
               "Type": 10
             },
             {
               "Name": "Waymaker Bomb",
-              "Description": "Spawned by the Improved Blasting Device. Used to damage the boss' Rock Suit. Must be picked up by a player and placed in the boss' path; they will explode ~15 seconds after they are first summoned. Deals about ~10% of the boss' health.",
+              "Description": "Generata dall'Improved Blasting Device. Usata per dannaggiare la Rock Suit del boss. Va presa da un giocatore e portata sul percorso del boss; esploderanno circa 15 secondi dopo essere state evocate. Danneggiano circa il 10% della salute del boss.",
               "Type": 10
             },
             {
               "Name": "Kindling Sprite",
-              "Description": "A fire sprite that spawns regularly in random locations of the room. Must be killed quickly as it deals moderate damage to whoever it targets.",
+              "Description": "Uno sprite di fuoco che si genera regolarmente in luoghi casuali della stanza. Va ucciso subito in quanto provoca danno moderato a chiunque sia preso di mira.",
               "Type": 7
             },
             {
               "Name": "Blasting Cap",
-              "Description": "A trio of three bombs spawns near the Improved Blasting Device and use Self-destruct, which hits for heavy (or fatal) damage.",
+              "Description": "Un trio di tre bombe generate vicino all'Improved Blasting Device e usano Self-destruct, che colpisce con danni pesanti (o mortali).",
               "Type": 2
             },
             {
               "Name": "Rockslide",
-              "Description": "Instant cast long line AoE aimed at the MT. Deals moderate damage. Replaced by Earthen Heart at around ~20%.",
+              "Description": "AoE longilinea con cast istantaneo che mira al MT. Provoca danno moderato. Sostuita da Earthen Heart al 20% circa.",
               "Type": 2
             },
             {
               "Name": "Stone Skull",
-              "Description": "The boss will headbutt the MT, dealing light damage.",
+              "Description": "Il boss prende a testate il MT, infliggendo danno leggero.",
               "Type": 10
             },
             {
               "Name": "Plaincracker",
-              "Description": "A large AoE centered on the boss that deals moderate damage.",
+              "Description": "Grande AoE centrata sul boss che provoca danno moderato.",
               "Type": 2
             },
             {
               "Name": "Earthen Heart",
-              "Description": "Drops a large blue puddle AoE on a random patch of ground. Stepping into the puddle while carrying a Waymaker Bomb will make it explode.",
+              "Description": "Getta una pozza AoE blu enorme su un punto a caso del terreno. Entrando nella pozza trasportando una Waymaker Bomb la farà esplodere.",
               "Type": 2
             }
           ]
@@ -102,36 +102,36 @@
       "Name": "Ouranos",
       "Phases": [
         {
-          "Strategy": "Keep an eye on the chat log to see when to feed a Crystalized Rock to the Abyss Worm.\n\nAvoid standing in Mercurial Strike.\n\nHealers should be ready to dispel any Slow debuffs from players caught in Power Attack.",
+          "Strategy": "Tenete d'occhio il chat log per capire quando dare da mangiare una Crystalized Rock all'Abyss Worm.\n\nEvitate di stare nel Mercurial Strike.\n\nGli healer devono essere pronti a dissipare qualsiasi debuff Slow dai giocatori colpiti da Power Attack.",
           "KeyMechanics": [
             {
               "Name": "Crystalized Rock",
-              "Description": "Spawns around the outside of the arena. Limited resource. Used to pacify the Abyss Worm.",
+              "Description": "Si genera intorno all'esterno dell'arena. Risorsa limitata. Usata per calmare l'Abyss Worm.",
               "Type": 10
             },
             {
               "Name": "Abyss Worm",
-              "Description": "Will travel around the sand in the center of the room. Occasionally, a message saying \"The abyss worm is searching for fodder.\" will appear. At this time, a player should pick up a Crystalized Rock and drop it somewhere inside the sand pit. If unfed, will pull all players to the center of the sandpit, dealing moderate damage.",
+              "Description": "Si sposterà sotto la sabbia nel centro della stanza. Ogni tanto, un messaggio che dice \"The abyss worm is searching for fodder.\" apparirà. In quel momento, un giocatore deve raccogliere una Crystalized Rock e lasciarla da qualche parte nel pozzo di sabbia. Se non viene sfamato, tirerà tutti i giocatori al centro della sabbia, infliggendo danni moderati.",
               "Type": 2
             },
             {
               "Name": "Mercurial Strike",
-              "Description": "Large AoE centered on the boss. Knocks back any players caught in it.",
+              "Description": "Grande AoE centrata sul boss. Spinge via tutti i giocatori presi.",
               "Type": 2
             },
             {
               "Name": "Impact Roar",
-              "Description": "Summons the Hecatoncheir Adds. Can be stunned.",
+              "Description": "Evoca gli add dell'Hecatoncheir. Può essere stunnato.",
               "Type": 7
             },
             {
               "Name": "Power Attack",
-              "Description": "Targets a random player with an AoE. Anyone caught in it will be afflicted with a dispelable Slow debuff.",
+              "Description": "Mira ad un giocatore a caso con una AoE. Chiunque venga catturato subirà l'effetto del debuff Slow, che può essere tolto.",
               "Type": 2
             },
             {
-              "Name": "Hecatoncheir Adds",
-              "Description": "Spawns 1-2 adds that will fixate on a random player. Should be killed quickly.",
+              "Name": "Add di Hecatoncheir",
+              "Description": "Genera 1-2 add che si fissano su un giocatore a caso. Vanno uccisi subito.",
               "Type": 7
             }
           ]
