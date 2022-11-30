@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3
         with:
           fetch-depth: 0
       - name: Set up .NET
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@608ee757cfcce72c2e91e99aca128e0cae67de87 # v1
         with:
           dotnet-version: 6.0.x
       - name: Restore Dependencies
@@ -51,7 +51,7 @@ jobs:
           DALAMUD_HOME: /tmp/dalamud
           IsCI: true
       - name: UploadArtifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb # v3
         with:
           name: ${{ env.INTERNAL_NAME }}
           path: ${{ env.RELEASE_DIR }}
@@ -60,20 +60,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3
         with:
           path: plugins/
           repository: ${{ env.XIVITA_REPO_URL }}
           token: ${{ secrets.PAT }}
           ref: ${{ github.event.pull_request.head.ref }}
       - name: Download
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7 # v3
         with:
           name: XIVITAGuide
           paths: plugins/${{ env.INTERNAL_NAME }}
           pathspec_error_handling: exitImmediately
       - name: Commit
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@61a88be553afe4206585b31aa72387c64295d08b # v9
         with:
           author_name: Priscilla(XIVITA)
           author_email: noreply@ahd-creative.agency
