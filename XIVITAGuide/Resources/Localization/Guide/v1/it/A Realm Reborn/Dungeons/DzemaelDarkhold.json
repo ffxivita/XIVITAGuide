@@ -15,22 +15,22 @@
       "Name": "All-seeing Eye",
       "Phases": [
         {
-          "Strategy": "Fight the All-seeing Eye near the glowing crystal clusters to gain the Crystal Veil buff. When \"The power of the crystal begins to dim\" appears on screen, move to a new crystal cluster immediately. The All-seeing Eye is invulnerable to attack except when it is near a cluster of crystals.",
-          "StrategyShort": "Fight near the glowing crystal clusters to do damage to the All-seeing Eye.",
+          "Strategy": "Combatti l'All-seeing Eye vicino agli ammassi di cristalli luminosi per ottenere il buff Crystal Veil. Quando appare a schermo \"The power of crystal begins to dim\", andate subito da un nuovo ammasso di cristalli. L'All-seeing Eye è invulnerabile agli attacchi tranne quando vicino ad un ammasso di cristalli.",
+          "StrategyShort": "Combatti vicino agli ammassi di cristalli per danneggiare l'All-seeing Eye.",
           "Mechanics": [
             {
               "Name": "Dread Gaze",
-              "Description": "Frontal AoE attack that inflicts the Paralysis debuff",
+              "Description": "Attacco AoE frontale che infligge il debuff Paralysis",
               "Type": 2
             },
             {
               "Name": "Cursed Gaze",
-              "Description": "Frontal AoE attack that inflicts the Amnesia debuff",
+              "Description": "Attacco AoE frontale che infligge il debuff Amnesia",
               "Type": 2
             },
             {
               "Name": "Eyes on Me",
-              "Description": "Deals damage all players near the All-seeing Eye. Players under the effect of Crystal Veil are immune to this damage.",
+              "Description": "Provoca danni su tutti i giocatori vicino l'All-seeing Eye. I giocatori sotto l'effetto di Crystal Veil sono immuni a questo danno.",
               "Type": 2
             }
           ]
@@ -42,21 +42,21 @@
       "Name": "Taulurd",
       "Phases": [
         {
-          "Strategy": "He has some powerful AoE cone attacks that should be avoided by all players. Throughout the fight he will summon adds named Deepvoid Slaves. These monsters are on top of an elevated platform. They will perform ranged attacks at the players. Be sure to spread out and avoid their Firewater attacks.",
+          "Strategy": "Ha degli attacchi AoE a cono potenti che vanno evitati da tutti. Per tutto il fight evoca degli add chiamati Deepvoid Slaves. Questi mostri sono in cima ad una piattaforma elevata. Fanno attacchi a distanza su tutti i giocatori. Assicuratevi di stare separati per evitare i loro attacchi Firewater.",
           "Mechanics": [
             {
               "Name": "Straight Punch",
-              "Description": "Instant melee attack that deals a small amount of damage.",
+              "Description": "Attacco melee istantaneo che prova una piccola quantità di danni.",
               "Type": 0
             },
             {
               "Name": "Double Smash",
-              "Description": "Frontal AoE cone attack that deals a large amount of damage.",
+              "Description": "Attacco AoE a cono frontale che provo una grande quantità di danni.",
               "Type": 2
             },
             {
               "Name": "Elbow Drop",
-              "Description": "Frontal AoE cone attack that deals large amount of damage. Used when under 50%% HP.",
+              "Description": "Attacco AoE a cono frontale che infligge grandi quantità di danni. Usata quando sotto il 50% di HP.",
               "Type": 2
             }
           ]
@@ -68,27 +68,27 @@
       "Name": "Batraal",
       "Phases": [
         {
-          "Strategy": "Batraal is the final boss of Dzemael Darkhold. This demon has an instant frontal AoE cone attack that deals heavy damage to all targets hit. Be sure to have only the tank face the boss. He has has a long ranged AoE column attack named Desolation that does extremely high damage and will instantly kill most players. Throughout the fight, a purple beam will appear between Batraal and a crystal. Batraal will mark a player with a crosshair and fires Desolation at the target. While Batraal is connected to the crystal, he is invulnerable. Be sure to kill the crystal as soon as possible while dodging Desolations. The player who was targeted should avoid aiming the Desolations at the rest of the party. At around 30%% HP and after the 3rd crystal is destroyed, Batraal will use Hellssend and become enraged. He will start using Desolation at will. Batraal will also spawn black pools under 3 players. Players within the pool will take damage over time. Move out of them immediately. The puddles will occasionally explode and deal high damage to anyone standing in them.",
-          "StrategyShort": "Destroy the crystals that are linked with the purple beam immediately to do damage to Batraal. Avoid standing with the party if you are targeted by Desolation.",
+          "Strategy": "Batraal è il boss finale di Dzemael Darkhold. Questo demone ha una AoE a cono frontale istantanea che provoca grandi danni a tutti coloro che vengono colpiti. Solo il tank deve essergli di fronte. Ha un lungo attacco AoE a distanza a colonna chiamato Desolation che infligge danno estremamente alto che può uccidere subito molti giocatori. Durante il fight, appare un raggio viola tra Batraal e un cristallo. Batraal punto un giocatore con un mirino e spara Desolation sul target. Mentre Batraal è connesso al cristallo, è invulnerabile. Per questo, uccidete il cristallo il prima possibile mentre evitate Desolation. Il giocatore preso di mira deve evitare che Desolation finisca sul resto del party. A circa il 30% di HP, e dopo aver distrutto il terzo cristallo, Batraal usa Hellsend e va in enrage. Comincia ad usare Desolation a piacimento. Batraal fa apparire anche delle pozze nere sotto 3 giocatori. I giocatori nella pozza subiranno danno a tempo. Spostatevi immediatamente. Le pozze esploderanno occasionalmente provocano ingenti danni su chiunque ci stia dentro.",
+          "StrategyShort": "Distruggere i cristalli che sono collegati con il raggio viola immediatamente per fare danno su Batraal. Evitare di stare vicino al party se si ha il target di Desolation.",
           "Mechanics": [
             {
               "Name": "Grim Fate",
-              "Description": "Instant attack that deals heavy damage to a single player.",
+              "Description": "Attacco istantaneo che infligge pesanti danni su un solo giocatore.",
               "Type": 0
             },
             {
               "Name": "Grim Cleaver",
-              "Description": "Instant ranged attack that deals damage to a random player.",
+              "Description": "Attacco a distanza istantaneo che infligge danni su un giocatore a caso.",
               "Type": 6
             },
             {
               "Name": "Grim Halo",
-              "Description": "Instant attack that deals moderate damage to all players around.",
+              "Description": "Attacco istantaneo che provoca danno moderato su tutti i giocatori intorno.",
               "Type": 2
             },
             {
               "Name": "Desolation",
-              "Description": "AoE column that deals very heavy damage to all players caught within.",
+              "Description": "Colonna AoE che infligge danni molto pesanti su tutti i giocatori coinvolti.",
               "Type": 2
             }
           ]
