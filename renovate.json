@@ -1,13 +1,7 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>ahdcreative/renovate-config"],
-    "prCreation": "immediate",
+    "extends": ["github>ffxivita/.github"],
     "packageRules": [
-        {
-            "matchPackagePatterns": ["*"],
-            "reviewers": ["HsinVega842", "DarkArtek"],
-            "assignees": ["HsinVega842", "DarkArtek"]
-        },
         {
             "excludeCommitPaths": ["XIVITAGuide/XIVITAGuide.json"]
         },
