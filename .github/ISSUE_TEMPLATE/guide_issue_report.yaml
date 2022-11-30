@@ -1,7 +1,7 @@
 name: 📃 Guide Issue Report
 description: Segnalate problemi o suggerimenti per le guide.
 title: "Report Issue Guide"
-ody:
+body:
   - type: markdown
     attributes:
       value: |
