@@ -61,7 +61,7 @@ L'editor di guide incorporato a questo plugin, ha un sistema di validazione json
       - `Description`: Descrizione della meccanica
       - `Type`: ID della meccanica
 
-Un esempio di Duty, può essere trovato [qui](src/Resources/Localization/Duty/en/A%20Realm%20Reborn/Dungeons/CopperbellMines.json).
+Un esempio di Duty, può essere trovato [qui](XIVITAGuide/blob/main/XIVITAGuide/Resources/Localization/Guide/v1/it/A%20Realm%20Reborn/Dungeons/BrayfloxsLongstop.json).
 
 Quando scrivi una descrizione delle meccaniche del boss, cerca sempre di essere il più conciso possibile. 
 
