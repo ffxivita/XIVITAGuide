@@ -15,21 +15,21 @@
       "Name": "Myrmidon Princess",
       "Phases": [
         {
-          "Strategy": "At around 50%% HP Myrmidon Princess will summon 3 types of adds. The recommended add-kill priority is: Myrmidon Marshal first (can cast an ability that heals Myrmidon Princess), Myrmidon Guard second, and Myrmidon Soldiers last.",
+          "Strategy": "Attorno al 50% di HP, la Myrmidon Princess evoca 3 tipi di add. La priorità per uccidere gli add è: prima il Myrmidon Marshal (può lanciare un'abilità che guarisce la Myrmidon Princess), secondo Myrmidon Guard, e ultimi i Myrmidon Soldier.",
           "Mechanics": [
             {
               "Name": "Mandible Bite",
-              "Description": "Frontal cone AoE attack",
+              "Description": "Attacco AoE conico frontale",
               "Type": 2
             },
             {
               "Name": "Silence",
-              "Description": "Silences one party member",
+              "Description": "Silenzia un membro del party",
               "Type": 6
             },
             {
               "Name": "Haste",
-              "Description": "Increases the attack speed of adds",
+              "Description": "Aumenta la velocità di attacco degli add",
               "Type": 10
             }
           ]
@@ -41,37 +41,37 @@
       "Name": "Giant Tunnel Worm",
       "Phases": [
         {
-          "Strategy": "Throughout the fight, Giant Tunnel Worm will submerge underneath the sandy grounds of the boss room. The Worm is the most dangerous when it is submerged. Spreading out when the worm submerges reduces the chance that multiple party members will be hit when it emerges from the sand. It is important that after it does the Bottomless desert that adventurers move out of the center to not get hit when the worm emerges.",
-          "StrategyShort": "Spread out when the worm submerges to avoid reduces chance that multiple party members will be hit when it emerges. It is important to not stand in the center when the worm does Bottomless desert.",
+          "Strategy": "Durante il fight, il Giant Tunnel Worm si immerge sotto i terreni sabbiosi della stanza del boss. Il Worm è il più pericoloso quando torna a galla. Dividersi lontano quando il verme risale riduce la possibilità che più membri del party vengano colpiti quando emerge dalle sabbie. È importante che dopo aver fatto Bottomless Desert gli avventurieri si muovano fuori dal centro per non venire colpiti quando il verme riemerge.",
+          "StrategyShort": "Seperarsi quando il verme si immerge per evitarlo riduce la possibilità che più membri del party vengano colpiti quando torna a galla. È importante non stare al centro quando il verme fa Bottomless Desert.",
           "Mechanics": [
             {
               "Name": "Sandstorm",
-              "Description": "Instant frontal attack that deals a small amount of damage.",
+              "Description": "Attacco frontale istantaneo che provoca una piccola quantità di danni.",
               "Type": 9
             },
             {
               "Name": "Sand Cyclone",
-              "Description": "Targets a random party member, does damage and inflicts a damage over time debuff.",
+              "Description": "Targetta un membro del party a caso, fa danno ed applica un DoT (danno a tempo).",
               "Type": 6
             },
             {
               "Name": "Sand Pillar",
-              "Description": "Used when burrowed, damages any player standing on top of the sand trap",
+              "Description": "Usato quanto sottoterra, provoca danno a qualsiasi giocatori si trovi sopra la trappola di sabbia",
               "Type": 2
             },
             {
               "Name": "Earthbreak",
-              "Description": "Used when burrowed explodes out of the ground and heavily damages anyone near it.",
+              "Description": "Usato quando sottoterra, esplode fuori dal suolo e danneggia pesantemente chiunque sia vicino.",
               "Type": 2
             },
             {
               "Name": "Bottomless Desert",
-              "Description": "Used when burrowed, appears as a whirlwind on the ground, does damage and pulls all party members towards its center.",
+              "Description": "Usato quando sottoterra, appare come un vortice a terra, danneggia e tira via tutti i membri del party verso il centro.",
               "Type": 4
             },
             {
               "Name": "Sludge",
-              "Description": "Inflicts a DoT (~200 HP per tick) on a random player.",
+              "Description": "Provoca un DoT (~200 HP per tick) su un giocatore a caso.",
               "Type": 6
             }
           ]
@@ -83,37 +83,37 @@
       "Name": "Chimera",
       "Phases": [
         {
-          "Strategy": "Occasionally Chimera will use the abilities Ram's Breath and Dragon's Breath. Ram's Breath causes Ice damage and the heavy debuff on the right side of its body and Dragon's Breath causes Thunder damage and the paralysis debuff on the left side of its body. DPS & Healers can stand directly behind Chimera to avoid these cones. Most of Chimera's attacks will paralyze its target, which can be cleansed with Esuna.\n\nAt 75%% HP, the Chimera will begin to use two attacks called Dragon's Voice and Ram's Voice. When Chimera casts Dragon's Voice all players should move close to the boss to avoid damage. When Chimera casts Ram's Voice all players should move away from Chimera to avoid damage.",
-          "StrategyShort": "Ram's Breath (right side) and Dragon's Breath (left side) cause Ice and Thunder damage respectively.\n\nAt 75%% HP, the Chimera will begin to use two attacks called Dragon's Voice and Ram's Voice. When Chimera casts Dragon's Voice all players should move close to the boss to avoid damage. When Chimera casts Ram's Voice all players should move away from Chimera to avoid damage.",
+          "Strategy": "Occasionalmente Chimera utilizza le abilità Ram's Breath e Dragon's Breath. Ram's Breath provoca danno di Ghiaccio e un debuff di appesantimento sul lato destro del corpo, e Dragon's Breath causa danno di Tuono e il debuff di paralisi sul lato sinistro del corpo. I DPS e gli healer possono stare direttamente dietro Chimera per evitare questi coni. Molti degli attacchi di Chimera paralizzano il target, che può essere ripulito con Esuna.\n\nA 75% di HP, Chimera inizia ad usare due attacchi chiamati Dragon's Voice e Ram's Voice. Quando Chimera casta Dragon's Voice tutti i giocatori devono avvicinarsi al boss per evitare il danno. Quando Chimera casta Ram's Voice tutti i giocatoi devono allontanarsi da Chimera per evitare il danno.",
+          "StrategyShort": "Ram's Breath (lato destro) e Dragon's Breath (lato sinistro) provocano rispettivamente danno di ghiaccio e di tuono.\n\nAl 75% di HP, Chimera inizia a usare due attacchi chiamati Dragon's Voice e Ram's Voice. Quando Chimera casta Dragon's Voice tutti i giocatori devono avvicinarsi al boss per evitare il danno. Quando Chimera casta Ram's Voice tutti i giocatori devono allontanarsi da Chimera per evitare il danno.",
           "Mechanics": [
             {
               "Name": "Ram's Breath",
-              "Description": "Deals ice damage and inflicts the heavy debuff on the right side of its body.",
+              "Description": "Infligge danni di ghiaccio e il debuff Heavy sul lato destro del suo corpo.",
               "Type": 2
             },
             {
               "Name": "Dragon's Breath",
-              "Description": "Deals thunder damage and inflicts the paralysis debuff on the left side of its body.",
+              "Description": "Infligge danni di tuono e il debuff Paralysis sul lato sinistro del suo corpo.",
               "Type": 2
             },
             {
               "Name": "Dragon's Voice",
-              "Description": "AoE damage in a ring away from the boss.",
+              "Description": "Danno AoE in un anello lontano dal boss.",
               "Type": 2
             },
             {
               "Name": "Ram's Voice",
-              "Description": "AoE damage in a circle close to the boss.",
+              "Description": "Danno AoE in un cerchio vicino al boss.",
               "Type": 2
             },
             {
               "Name": "Cacophony",
-              "Description": "Purple ball that moves towards a target and explodes. Deals splash damage and inflicts Paralysis.",
+              "Description": "Palla viola che si muove verso un target ed esplode. Provoca danno da schizzi e infligge Paralysis.",
               "Type": 6
             },
             {
               "Name": "Ram's Keeper",
-              "Description": "Ice orb that flies to a random player. Inflicts Deep Freeze and leaves an icy patch at the hit location.",
+              "Description": "Sfera di ghiaccio che vola verso un giocatore a caso. Infligge Deep Freeze e lascia una chiazza ghiacciata dove colpisce.",
               "Type": 6
             }
           ]
