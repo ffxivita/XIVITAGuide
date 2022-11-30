@@ -12,7 +12,7 @@
       "Name": "Firemane",
       "Phases": [
         {
-          "Strategy": "Summons wisps as adds. The wisps travel toward the fire pit in the center of the boss room. If they reach the pit, they will explode and deal damage to everyone in your party."
+          "Strategy": "Evoca dei Wisp come add. I Wisp viaggiano dalla fossa di fuoco fino al centro della stanza del boss. Se raggiungono la fossa, esplodono e provocano danno su tutto il party."
         }
       ]
     },
@@ -21,16 +21,16 @@
       "Name": "Thunderclap Guivre",
       "Phases": [
         {
-          "Strategy": "During this boss fight, Guivre will become invulnerable twice. They spawn lightning elementals while invulnerable. Kill the elementals and the drake will become vulnerable again. Occasionally the water will glow purple; any players standing in the water will take Electrocution damage over time. It is in a shallow pool of water. Those in the water will take significantly more damage from the lightning attacks, so it is advised to fight on either of the slopes. During both add phases, it will run back into the pool to spawn the elementals which will approach the party.",
+          "Strategy": "Durante il fight del boss, Guivre diventa invulnerabile due volte. Evocano fulmini elementali durante l'Invulnerable. Uccidete gli elementali ed il drago tornerà di nuovo vulnerabile. Occasionalmente l'acqua brilla di viola: tutti i giocatori sull'acqua ricevono il DoT di Electrocution. È in una piscina d'acqua poco profonda. Quelli in acqua ricevono molto più danno dagli attacchi di fulmine, quindi è meglio combattere su uno dei due pendii. Durante entrambe le fasi add, tornerà indietro alla pozza per evocare gli elementali che si avvicinano al party.",
           "Mechanics": [
             {
               "Name": "Levinshower",
-              "Description": "Frontal AoE cone",
+              "Description": "AoE a cono frontale",
               "Type": 2
             },
             {
               "Name": "Electrify",
-              "Description": "Non-self-centered AoE attack",
+              "Description": "Attacco AoE non centrato",
               "Type": 2
             }
           ]
@@ -39,10 +39,10 @@
     },
     {
       "Type": 0,
-      "Name": "Pit Peiste (Optional)",
+      "Name": "Pit Peiste (Facoltativo)",
       "Phases": [
         {
-          "Strategy": "Pit Peiste is an optional boss with Rudius Beaks as adds."
+          "Strategy": "Pit Peiste è un boss facoltativo con i Rudius Beak come add."
         }
       ]
     },
@@ -51,7 +51,7 @@
       "Name": "Tangata",
       "Phases": [
         {
-          "Strategy": "Tangata, the giant ox-like creature, is the final boss of Halatali. During the fight, Tangata will periodically become invulnerable in a pool of lava. While invulnerable, they summon wisps and fire sprites. Wisps will travel toward Tangata and explode if they reach them. Fire sprites will attack your party members. Kill the adds and Tangata will become vulnerable again."
+          "Strategy": "Tangata, la creature gigante simile ad un bue, è il boss finale di Halatali. Durante il fight, Tangata diventa periodicamente invulnerabile in una pozza di lava. Mentre è invulnerabile, evoca Wisp e Fire Sprites. Gli Wisp si spostano verso Tangata ed esplodono se lo raggiungono. I Fire Sprites attaccano i membri del party. Uccidete gli add e Tangata torna di nuovo vulnerabile."
         }
       ]
     }
