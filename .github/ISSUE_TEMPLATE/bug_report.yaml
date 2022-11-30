@@ -1,7 +1,7 @@
 name: 🐛 Bug report
 title: "Bug: "
 description: Report unintentional behaviour or errors
-assignees: "DarkArtek" 
+assignees: DarkArtek
 labels: "type | bug"
 body:
   - type: markdown
