@@ -15,21 +15,21 @@
       "Name": "Karlabos",
       "Phases": [
         {
-          "Strategy": "Healers should be ready to dispel the Slime debuff as soon as it is applied to party members or anyone hit by Tail Screw will die.\n\nTail Screw will bring the targeted player down to 1HP - be ready to heal them immediately after.\n\nTethered players are about to be stunned - run into a different teammate if you need to avoid being stunned and the tether will attach to them instead.",
+          "Strategy": "Gli healer devono essere pronti per dissipare il debuff Slime quanto prima sui membri del party o chiunque venga colpito da Tail Screw morirà.\n\nTail Screw porta il giocatore target a 1HP -preparatevi a curarlo subito dopo.\n\nI giocatori collegati che stanno per essere stunnati devono correre verso un altro compagno di squadra per evitare lo stun. Il tether si attaccherà invece su lui.",
           "Mechanics": [
             {
               "Name": "Impale",
-              "Description": "This attack hits the primary threat target for moderate damage - shield and heal as necessary.",
+              "Description": "Questo attacco colpisce il bersagio principale con danno moderato - scudi e cure se necessario.",
               "Type": 0
             },
             {
               "Name": "Slime & Tail Screw",
-              "Description": "The boss will target a random player and hit them with Tail Screw, bringing their health down to 1HP - healers be ready to top this player off.\nDuring the fight, players will accrue the Slime debuff - if a player with Slime is hit by Tail Screw, they will die - healers dispel Slime as soon as possible.",
+              "Description": "Il boss mira ad un giocatore casuale e lo colpisce con Tail Screw, portando la sua vita a 1HP. Gli healer devono stare pronti a risanare questo giocatore.\nDurante il fight, i giocatori subiranno il debuff Slime. Se un giocatore con Slime viene colpito da Tail Screw, muore. Gli healer devono dissipare Slime il prima possibile.",
               "Type": 6
             },
             {
               "Name": "Prey",
-              "Description": "The boss will tether to a player and begin to follow them around - eventually the attack will stun the player for a time.\nThis attack can be passed to another team member by running into them - the boss's tether will pass to them, freeing the original player from being stunned.",
+              "Description": "Il boss si collega ad un giocatore per inseguirlo in giro - alla fine l'attacco stunnerà il giocatore per un po'.\nQuesto attacco può essere passato ad un altro membro della squadra correndogli incontro. Il tether del boss passerà su di lui, liberando il giocatore originale dallo stun.",
               "Type": 6
             }
           ]
@@ -39,26 +39,26 @@
           "Name": "Captain Madison",
           "Phases": [
             {
-              "Strategy": "Captain's Slave adds will latch onto players and stun them, preventing them from DPSing the boss during In the Line of Fire - kill these adds first.\n\nThe only way to stop the boss when he's attacking with In the Line of Fire is to damage him by a certain amount.",
+              "Strategy": "Gli add Slave del Captain si agganceranno ai giocatori e li stunneranno, impedendo loro di fare DPS sul boss durante Line of Fire. Uccidere prima questi add.\n\nL'unico modo per fermare il boss quando sta attaccando con In the Line of Fire è facendo danno di una certa quantità.",
               "Phases": [
                 {
                   "Name": "Captain's Crew",
-                  "Description": "These adds should be picked up and removed as quick as possible - prioritize Slaves and Leechs as they stun players and heal the boss respectively.\n\nCaptain's Boy & Captain's Guard\n\tThese are generic adds that can be burned down as quick as possible.\n\nCaptain's Leech\n\tThis add will heal the boss - kill it as soon as possible.\n\nCaptain's Slave\n\tThis add will latch onto a player and stun them until it is killed - prioritize these to avoid lowering group DPS.",
+                  "Description": "Questi add vanno presi e rimossi il prima possibile. Priorità agli Slaves e ai Leeches dato che stunnano i giocatori e curano il boss rispettivamente.\n\nCaptain's Boy & Captain's Guard\n\tSono add generici da far fuori il più velocemente possibile.\n\nCaptain's Leech\n\tQuesto add cura il boss - va ucciso quanto prima.\n\nCaptain's Slave\n\tQuesto add si aggancia ad un giocatore e lo stunna finché non viene ucciso. Date priorità a questi add per evitare di abbassare il DPS del gruppo.",
                   "Type": 7
                 },
                 {
                   "Name": "Hornswaggle",
-                  "Description": "This attack hits the primary threat target for moderate damage - shield and heal as necessary.",
+                  "Description": "Questo attacco colpisce il bersagio principale con danno moderato - scudo e cura se necessario.",
                   "Type": 0
                 },
                 {
                   "Name": "Keelhaul",
-                  "Description": "This is a wide frontal cleave - keep the boss facing away from the group at all times.",
+                  "Description": "È un ampio fendente frontale - tenere il boss girato rispetto al gruppo per tutto il tempo.",
                   "Type": 6
                 },
                 {
                   "Name": "In the Line of Fire",
-                  "Description": "The boss will target a single player and begin to shoot them - the only way to stop him is to damage him by a certain amount - all players should stop and focus the boss when he uses this attack to minimize damage.",
+                  "Description": "Il boss mira ad un giocatore e comincia a sparargli. Il solo modo per fermarlo è danneggiarlo fino ad un certo punto. Tutti i giocatori dovrebbero fermarsi e concentrarsi sul boss quando usa questo attacco per minimizzare il danno.",
                   "Type": 2
                 }
               ]
@@ -70,16 +70,16 @@
           "Name": "Kraken",
           "Phases": [
             {
-              "Strategy": "Focus on killing Kraken's Arm adds to stun the boss for free time to damage him - ignore Arm adds with the Determination buff.",
+              "Strategy": "Concentrarsi sull'uccidere gli add Kraken's Arm per stunnare il boss per tempo libero per danneggiarlo. Ignora gli add Arm con il buff Determination.",
               "Mechanics": [
                 {
                   "Name": "Limbs",
-                  "Description": "Ignore Tentacles and focus on killing Kraken's Arms to eventually stun the boss.\n\nIgnore Arm adds with the Determination buff, as it's a waste of time to kill them.\n\nTentacle\n\t1 of 2 types of adds during this fight, these adds will grab and stun players if they get too close - stand far away and ignore these otherwise.\n\nKraken's Arm\n\tKilling all of these adds will stun the boss, providing free time to damage him.\n\tWhen these adds spawn with a Determination buff, ignore them, as they soak time and take forever to kill - damage the boss instead.",
+                  "Description": "Ignorare i Tentacles e concentrarsi ad uccidere i Kraken's Arms per stunnare il boss.\n\nIgnorare gli add Arm con il buff Determination, in quanto è una perdita di tempo ucciderli.\n\nTentacle\n\t1 di 2 tipi di add nel fight, questi add afferrano e stunnano i giocatori se sono troppo vicini - state lontano e ignorateli\n\nKraken's Arm\n\tUccidendo tutti questi add stunnerà il boss, offrendo tempo libero per fargli danno.\n\tQuando questi add appaiono con il buff Determination, ignorateli in quando prendono tempo e ci vuole una vita per ucciderli. Danneggiare invece il boss.",
                   "Type": 7
                 },
                 {
                   "Name": "Ink Jet",
-                  "Description": "This attack covers a large portion of the arena directly in front of the boss - tanks can soak damage from this attack but it will afflict them with a Blind debuff.",
+                  "Description": "Questo attacco copre gran parte dell'arena direttamente davanti al boss. I tank possono assorbire i danni da questo attacco ma subiscono il debuff Blind.",
                   "Type": 2
                 }
               ]
