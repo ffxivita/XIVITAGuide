@@ -15,41 +15,41 @@
       "Name": "Pyracmon",
       "Phases": [
         {
-          "Strategy": "Make sure to stand inside the Mammet Bubble after using the Mammet Activator so you can avoid the damage from 1000-tonze Swing. Only activating the bubble won't save you.",
+          "Strategy": "Entrate nella Mammet Bubble dopo aver usato il Mammet Activator così da evitare il danno del 100-tonze Swing. Attivare solo la bolla non vi salverà.",
           "Mechanics": [
             {
               "Name": "Eye of the Beholder",
-              "Description": "Unmarked 270° cone AoE in the direction the boss is facing. Move behind to avoid.",
+              "Description": "AoE a cono a 270° non segnalata di fronte al boss. Spostarsi dietro per evitarla.",
               "Type": 9
             },
             {
               "Name": "Piercing Glower",
-              "Description": "Unmarked line AoE in the direction of a random player. Sidestep to avoid.",
+              "Description": "AoE lineare non segnalata in direzione di un giocatore casuale. Mettersi da parte per evitarla.",
               "Type": 2
             },
             {
               "Name": "100-tonze Swipe",
-              "Description": "Unmarked wide frontal cone AoE that deals moderate damage and knocksback players caught in it. Tank can sidestep or walk through the boss to avoid.",
+              "Description": "AoE a cono frontale ampia non segnalata che infligge danno moderato e respinge i giocatori coinvolti. Il tank può mettersi in parte o passare sotto al boss per evitare.",
               "Type": 9
             },
             {
               "Name": "100-tonze Swing",
-              "Description": "Unmarked large AoE centered on the boss that deals moderate damage and knocksback players caught in it. Walk back a few steps to avoid.",
+              "Description": "Grande AoE non segnalata centrata sul boss che provoca danno moderato e respinge i giocatori coinvolti. Andare indietro di qualche passo per evitarla.",
               "Type": 2
             },
             {
               "Name": "1000-tonze Swing",
-              "Description": "Roomwide AoE where the floor glows blueish purple. Has a long cast time and is fatal if not standing in the Mammet Bubble.",
+              "Description": "AoE a tutto raggio in cui il pavimento si illumina di viola bluastro. Ha un lungo cast ed è fatale se non si trova nella Mammet Bubble.",
               "Type": 4
             },
             {
               "Name": "Mammet Activator",
-              "Description": "Causes the Admirer Mammet to stop moving and spawn a damage reduction bubble for a short time. The lever will become unusable for a short time after.",
+              "Description": "Fa sì che l'Admirer Mammet smetta di muoversi e generi una bolla che riduce il danno per un breve periodo. La leva diventerà inutilizzabile per un breve periodo di tempo.",
               "Type": 10
             },
             {
               "Name": "Admirer Mammet #022A",
-              "Description": "Spawns a Mammet Bubble for a short time after using the Mammet Activator. Used to avoid 1000-tonze Swing.",
+              "Description": "Genera una Mammet Bubble per un breve periodo di tempo dopo aver usato il Mammet Activator. Usato per evitare 1000-tonze Swing.",
               "Type": 10
             }
           ]
@@ -61,41 +61,41 @@
       "Name": "Catoblepas",
       "Phases": [
         {
-          "Strategy": "Leave the Shadowy Orbs nearest the boss for the melee classes and have the ranged classes take the further ones.\n\nMake sure to kill the Tainted Eye ASAP so you don't need to deal with the Bestial Roar AoEs longer than necessary.",
+          "Strategy": "Lasciate le Shadowy Orbs più vicine al boss per le classi melee e fate prendere quelle successive alla classi ranged.\n\nUccidete il Tainted Eye appena possibile così da non dover avere a che fare con l'AoE Bestial Roar più a lungo del necessario.",
           "Mechanics": [
             {
               "Name": "Eye Phases",
-              "Description": "Various messages will display detailing the color of the boss' eye. The color affects what abilities it will use.\n\tBlue: Uses Cold Stare.\n\tYellow: Uses Demon Eye.\n\tRed: Uses Bestial Roar and spawns a Tainted Eye.",
+              "Description": "Vari messaggi mostrano i dettagli del colore dell'occhio del boss. Il colore ha effetto sull'abilità usata.\n\tBlu: Usa Cold Stare.\n\tGiallo: Usa Demon Eye.\n\tRosso: Usa Bestial Roar e genera un Tainted Eye.",
               "Type": 10
             },
             {
               "Name": "Shadowy Orb",
-              "Description": "There are four of these, one on each pedastal, spaced equidistant around the room. Used to avoid Demon Eye. Grants a ~45-second blind debuff on use.",
+              "Description": "Ce ne sono quattro, una per ogni piedistallo, distanziate equidistanti intorno alla stanza. Usate per evitare Demon Eye. Concede un debuff Blind per ~45 secondi all'uso.",
               "Type": 10
             },
             {
               "Name": "Demon Eye",
-              "Description": "Used during Yellow Eye Phase. Has a very long cast and any players caught by it will be turned to stone. Use the Shadowy Orbs to prevent this.",
+              "Description": "Usato durante la fase Yellow Eye. Ha un cast molto lungo e ogni giocatore coinvolto diventerà di pietra. Usare le Shadowy Orbs per prevenirlo.",
               "Type": 4
             },
             {
               "Name": "Cold Stare",
-              "Description": "Used during Blue Eye Phase. Massive 90° conal AoE directed at a random player. Deals moderate damage and applies a paralysis debuff.",
+              "Description": "Usato durante la fase Blue Eye. AoE conica massiccia diretta ad un giocatore random. Causa danni moderati e applica il debuff Paralysis.",
               "Type": 2
             },
             {
               "Name": "Bestial Roar",
-              "Description": "Used repeatedly during Red Eye Phase. A roomwide AoE that deals moderate damage.",
+              "Description": "Usato ripetutamente durante la fase Red Eye. Una AoE su tutta la stanza che provoca danno moderato.",
               "Type": 4
             },
             {
               "Name": "Jettatura",
-              "Description": "Used in all Eye Phases. Spawns 1-4 eye AoEs beneath random players.",
+              "Description": "Usato in tutte le fasi Eye. Spawna una AoE da 1-4 occhi su giocatori a caso.",
               "Type": 2
             },
             {
               "Name": "Tainted Eye",
-              "Description": "Used during Red Eye Phase. The eye on the front of the boss' face becomes targetable. Should be killed ASAP and will revert the boss to Blue Eye Phase.",
+              "Description": "Usato durante la fase Red Eye. L'occhio di fronte al boss diventa targettabile. Va ucciso al più presto per permettere al boss di tornare in fase Blue Eye.",
               "Type": 8
             }
           ]
@@ -107,41 +107,41 @@
       "Name": "Mumuepo the Beholden",
       "Phases": [
         {
-          "Strategy": "Make sure to interact with the Thal's Scepter to free any trapped players.\n\nIgnore Narasimha until Mumuepo is killed.",
+          "Strategy": "Interagite con il Thal's Scepter per liberare qualsiasi giocatore sia intrappolato.\n\nIgnorare Narasimha finché Mumuepo non viene ucciso.",
           "Mechanics": [
             {
-              "Name": "Phase 1",
-              "Description": "Starts with four mobs that must be killed, listed in kill order below.\n\nSilent Moss the Solemn\n\tThe Conjurer of the group. Should be killed first as he will heal the others.\n\nLangloisiert the Lionheart\n\tThe Lancer of the group. Should be killed second as he can't be aggroed and deals high damage.\n\nU'linbho the Sand Devil\n\tThe Archer of the gorup. Should be killed third as he deals high damage but can be aggroed.\n\nFranz the Fair\n\tThe Gladiator of the group. Should be killed last as he does little damage.",
+              "Name": "Fase 1",
+              "Description": "Inizia con quattro mob che vanno uccisi nell'ordine qui sotto.\n\nSilent Moss the Solemn\n\tIl Conjurer del gruppo. Va ucciso per primo in quanto cura gli altri.\n\nLangloisiert the Lionheart\n\tIl Lancer del gruppo. Va ucciso per secondo perché non può essere aggrato e provoca forti danni.\n\nU'linbho the Sand Devil\n\tL'Archer del gruppo. Va ucciso per terzo dato che infligge grandi danni può essere aggrato.\n\nFeanz the Fair\n\tIl Gladiator del gruppo. Va ucciso per ultimo visto che fa poco danno.",
               "Type": 7
             },
             {
               "Name": "Mumuepo the Beholden",
-              "Description": "Should be killed before Narasimha. Uses Thal's Scepter and ???.",
+              "Description": "Va ucciso prima di Narasimha. Usare il Thal's Scepter e ???.",
               "Type": 7
             },
             {
               "Name": "Narasimha",
-              "Description": "Should be killed after Mumuepo. The tank should pick it up at the start of the fight, and the group should ignore it until then. Uses Fireball and Tail Swipe.",
+              "Description": "Va ucciso dopo Mumuepo. Il tank deve prenderlo all'inizio del combattimento, ed il gruppo deve ignorarlo fino ad allora. Usa Fireball e Tail Swipe.",
               "Type": 7
             },
             {
               "Name": "Thal's Scepter",
-              "Description": "Chains 2 players to it with Absolute Bind. Interacting with the scepter will break the bind and allow players to continue moving. Uses ??? during this.",
+              "Description": "Incatena 2 giocatori con Absolute Bind. Interagire con lo scettro rompe il legame e permette ai giocatori di continuare a muoversi. Usare ??? nel durante.",
               "Type": 10
             },
             {
               "Name": "???",
-              "Description": "Used during Thal's Scepter. Drops a massive AoE on the platform, often overlapping both of the chained players.",
+              "Description": "Usato durante il Thal's Scepter. Rilascia una AoE massiccia sulla piattaforma, sovrapponendosi spesso ai giocatori incatenati.",
               "Type": 2
             },
             {
               "Name": "Fireball",
-              "Description": "Large AoE on a random player.",
+              "Description": "Grande AoE su un giocatore random.",
               "Type": 2
             },
             {
               "Name": "Tail Swipe",
-              "Description": "Cone AoE from the boss' rear.",
+              "Description": "AoE a cono dal retro del boss.",
               "Type": 2
             }
           ]
