@@ -15,22 +15,22 @@
       "Name": "Manor Claviger",
       "Phases": [
         {
-          "Strategy": "Manor Claviger has an untelevised melee cleave attack. The attack can do massive physical damage to lightly armored party members. Make sure the tank faces her away from the rest of the party. When defeated, the doors leading to the Foyer will open, and Claviger will drop a Green Key. Do not go forward to the Foyer. Instead, proceed back out of the entrance of the boss room and use the Green Key to unlock the Ivy Door.",
-          "StrategyShort": "Face away from party due to cleave attacks. When the boss is defeated, exit the boss room the way you came in and open the door to the basement.",
+          "Strategy": "La Manor Claviger ha un attacco melee non visivo. L'attacco può provocare enormi danni fisici sui membri del party meno resistenti. Il tank deve affrontarla lontano dal resto del party. Una volta sconfitta, le porte che portano al Foyer si apriranno, e la Claviger lascerà cadere una Green Key. Non andate verso il Foyer. Invece, tornate indietro all'ingresso della stanza del boss e usate la Green Key per sbloccare la Ivy Door.",
+          "StrategyShort": "Va girato dal party per via degli attacchi fendenti. Una volta sconfitto il boss, uscite dalla sua stanza dalla direzione in cui siete arrivati e aprite la porta del seminterrato.",
           "Mechanics": [
             {
               "Name": "Sweet Steel",
-              "Description": "Untelivised cone AoE melee attack",
+              "Description": "Attacco AoE melee a cono non visibile",
               "Type": 2
             },
             {
               "Name": "Void Fire II",
-              "Description": "Uninterruptable AoE",
+              "Description": "AoE impossibile da interrompere",
               "Type": 2
             },
             {
               "Name": "Dark Mist",
-              "Description": "Large PBAoE, can be avoided by stunning Claviger.",
+              "Description": "Grande AoE Point Blank, può essere evitata stunnando Claviger.",
               "Type": 2
             }
           ]
@@ -39,20 +39,20 @@
     },
     {
       "Type": 0,
-      "Name": "Manor Jester and Manor Steward",
+      "Name": "Manor Jester e Manor Steward",
       "Phases": [
         {
-          "Strategy": "Manor Jester and Manor Steward are two bosses located in the same room. Jester is the spell caster and Steward is the tank. Players should kill Jester first because it deals more damage and has less HP. When defeated, Steward will drop a slip of Bloody Parchment, use this to unlock the Sealed Barrier on the stairs at the start of the Dungeon.",
-          "StrategyShort": "Kill Jester first. Then, use the Bloody Parchment to unlock the Sealed Barrier on the stairs by the entrance to the dungeon.",
+          "Strategy": "Manor Jester e Manor Steward sono due boss nella stessa stanza. Jester lancia incantesimi e lo Steward è il tank. I giocatori devono uccidere prima il Jester perché infligge più danno e ha meno HP. Una volta sconfitti, lo Steward rilascerà un Bloody Parchment, usato per sbloccare la Sealed Barrier sulle scale all'inizio del dungeon.",
+          "StrategyShort": "Uccidete prima il Jester. Poi, usate il Bloody Parchment per sbloccare la Sealer Barrier sulle scale all'entrata del dungeon.",
           "Mechanics": [
             {
               "Name": "Ice Spikes (Jester)",
-              "Description": "Uninterruptable casted spell",
+              "Description": "Incantesimo lanciato impossibile da interrompere",
               "Type": 6
             },
             {
               "Name": "Soul Drain (Steward)",
-              "Description": "Large PBAoE, can be avoided by stunning Steward.",
+              "Description": "Grande AoE Point Black, può essere evitata stunnando Steward.",
               "Type": 2
             }
           ]
@@ -64,22 +64,22 @@
       "Name": "Lady Amandine",
       "Phases": [
         {
-          "Strategy": "In the boss room, there are 4 Void Lamps. During the fight, the Void Lamps will periodically light up, doing AoE damage to the entire party. Players should turn off the lamps as soon as possible. Lady Amandine will cast Void Fire and Void Thunder. Avoid her spellcast if possible by interrupting or stunning her.\n\nAt approximately 50%% health, she will summon Lady's Candles which are bombs that will self-destruct if not destroyed quickly.\n\nAt approximately 25%% health, Lady Amandine will summon a Manor Sentry and Lady's Handmaidens. It is possible in certain circumstances to DPS down the boss if the party acts quickly enough. Otherwise, kill these adds before finishing off the boss.",
-          "StrategyShort": "Turn off Void Lamps as soon as possible. Avoid Void Fire and Void Thunder. If Lady Amandine summons Manor Sentry and Handmaidens, kill them before killing the boss.",
+          "Strategy": "Nella stanza del boss, ci sono 4 Void Lamps. Durante il fight, le Void Lamps si accenderanno periodicamente, provocando danni AoE a tutto il party. I giocatori dovrebbero spendere le lampade quanto prima. Lady Amandine casterà Void Fire e Void Thunder. Evitate i suoi incantesimi, se possibile, interrompendoli o stunnandola.\n\nAl 50% di salute circa, evoca le Lady's Candles che sono bombe che si autodistruggono se non vengono distrutte rapidamente.\n\nApprossimativamente al 25% di HP, Lady Amandine evoca un Manor Sentry e Lady's Handmaidens. È possibile, in certe circostanze, fare DPS per tirare giù il boss se il party agisce abbastanza velocemente. Altrimenti, uccidete tutti questi add prima di finire il boss.",
+          "StrategyShort": "Spegnete le Void Lamps quanto prima. Evitate Void Fire e Void Thunder. Se Lady Amandine evoca Manor Sentry e Handmaidens, ucciderli prima di far fuori il boss.",
           "Mechanics": [
             {
               "Name": "Void Fire III",
-              "Description": "Uninterruptable spell",
+              "Description": "Incantesimo impossibile da interrompere",
               "Type": 6
             },
             {
               "Name": "Void Thunder III",
-              "Description": "Uninterruptable  spell",
+              "Description": "Incantesimo impossibile da interrompere",
               "Type": 6
             },
             {
               "Name": "Dark Mist",
-              "Description": "Large PBAoE spell. This spell can be avoided by stunning Lady Amandine.",
+              "Description": "Grande incantesimo AoE Point Blank. Questo incantesimo può essere evitato stunnando Lady Amandine.",
               "Type": 2
             }
           ]
