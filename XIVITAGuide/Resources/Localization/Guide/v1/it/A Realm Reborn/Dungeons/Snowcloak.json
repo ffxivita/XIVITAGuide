@@ -15,36 +15,36 @@
       "Name": "Wandil",
       "Phases": [
         {
-          "Strategy": "Everyone - Try not to spread out too much. Especially when *Tundra is in effect. Tundra+Cold Wave makes the arena really tight, so you want to try and drop the bombs in a close proximity to each other to give you space to move about.\nWhen *Snowdrift is being cast start moving and don't stop until you see the visual effect, otherwise you will get a stack of *Frozen\n\nTank - Bring the boss close to the wall, but not on the wall (prep for *Tundra) & make sure the boss is facing away from the party so you don't cleave them.\n\nHealer - Keep an eye on the parties *Frozen stacks. If they get 4, they will be stunned for ~10s. Be prepared to heal them. Also be careful about your own stacks as you may be stood still healing whilst *Snowdrift is rolling in. Also, give the DPS a hand with the *Frost bombs when you get a chance.\n\nDPS - Make sure when the *Frost bombs spawn you put them down ASAP",
+          "Strategy": "Tutti - Cercate di non disperdervi troppo. Specialmente quando *Tundra è in effetto. Tundra+Cold Wave rende l'arena molto stretta, quindi se volete provare a rilasciare le bombe in prossimità vicine l'una all'altra per darvi spazio per muovervi.\nQuando *Snowdrift è in fase di cast iniziate a muovervi e non fermatevi finché non vedete l'effetto visivo, altrimenti otterrete una stack di *Frozen\n\nTank - Porta il boss vicino al muro, ma non sul muro (prep per *Tundra) e assicurati che il boss dia le spalle al party così da non prendere danni.\n\nHealer - Tieni d'occhio le stack di *Frozen del party. Se arrivano a 4, verranno stunnati per 10 secondi. Preparati per curarli. In più attenzione alle tue stack in quanto potresti rimanere bloccato mentre curi e *Snowdrift è ancora attivo. In più, aiuta i DPS con le *Frozen Bombs appena ne hai occasione.\n\nDPS - Quando appaiono le *Frozen Bombs assicuratevi di farle fuori appena possibile",
           "Mechanics": [
             {
               "Name": "Ice Guillotine",
-              "Description": "Frontal cleave - Moderate damage.",
+              "Description": "Fendente frontale - Danno moderato.",
               "Type": 9
             },
             {
               "Name": "Snowdrift",
-              "Description": "Raidwide attack - Moderate damage. If you are *not moving when the cast hits you will be inflicted with a stack of *Frozen. *Moving negates getting this stack. (PepeSad ;( Black Mages)",
+              "Description": "Attacco raidwide - Danno moderato. Se *non ci si sta muovendo quando il cast colpisce si subirà una stack di *Frozen. *Muoversi nega l'ottenimento di questa stack.",
               "Type": 4
             },
             {
               "Name": "Cold Wave",
-              "Description": "AOE's on random players. Will inflict a stack of *Frozen if hit.",
+              "Description": "AOE su giocatori casuali. Infligge una stack di *Frozen se si viene colpiti.",
               "Type": 2
             },
             {
               "Name": "Frost Bomb",
-              "Description": "Frost bomb adds spawn. If not dealt with ASAP, will explode dealing damage & inflicting a stack of *Frozen on the party.",
+              "Description": "Spawnano gli add Frost Bomb. Se non trattati immediatamente, esplodono facendo danno e infliggono una stack di *Frozen sul party.",
               "Type": 7
             },
             {
               "Name": "Tundra",
-              "Description": "At around ~40%% health the boss will shrink the arena. Standing on the ice will inflict you with a stack of *Frozen",
+              "Description": "A circa il 40% di salute il boss restringe l'arena. Stare sul ghiaccio dà una stack di *Frozen",
               "Type": 10
             },
             {
               "Name": "Frozen",
-              "Description": "At *4 stacks of *Frozen you will be Frozen/Stunned for ~10s",
+              "Description": "A *4 stack di *Frozen si viene congelati/stunnati per 10 secondi",
               "Type": 10
             }
           ]
@@ -56,26 +56,26 @@
       "Name": "Yeti",
       "Phases": [
         {
-          "Strategy": "Everyone - The boss has high defence so you have to utilize the *Snowball mechanic whilst DPS'ing. Work together to align *Spriggan Ice Cutters + *Frozen Mist attack to make snowballs. Subsequent hits by this attack will make the snowball larger, dealing more damage when it hits the boss. *DO NOT kill *Spriggan Ice Cutters.\n\nTank - You will juggling the boss position throughout the fight. When *Frozen Mist is being cast try and make it hit a *Spriggan. When *Buffet is being cast make sure it *DOES NOT hit a snowball.\n\nHealer - Keep everyone topped up. If the boss is casting *Northerlies and DPS are busy, hit a snowball at the boss. (Face the boss whilst hitting the snowball)\n\nDPS - As soon as the *Frostbound adds spawn, put them down. If the boss is casting *Northerlies, hit a snowball at the boss. (Face the boss whilst hitting the snowball) ",
+          "Strategy": "Tutti - Il boss ha un'alta difesa quindi va utilizzata la meccanica delle *Snowball mentre si fa DPS. Lavorate insieme per allineare gli *Spriggan Ice Cutters + *Frozen Mist per creare palle di neve. I colpi successivi da questo attacco renderanno la palla di neve più grande, facendo più danno quando colpisce il boss. *NON uccidete gli *Spriggan Ice Cutters.\n\nTank - Destreggiati con la posizione del boss durante il fight. Quando viene castato *Frozen Mist prova a fargli colpire uno *Spriggan. Quando inizia il cast di *Buffet assicurati che questo *NON colpisca una palla di neve.\n\nHealer - Tieni tutti con vita alta. Se il boss casta *Notherlies and i DPS sono occupati, colpisci una palla di neve verso il boss. (State di fronte al boss mentre colpite la palla di neve)\n\nDPS - Appena spawna l'add *Frostbound, tiratelo giù. Se il boss sta castando *Northerlies, colpite il boss con una palla di neve. (State di fronte al boss mentre colpite la palla di neve) ",
           "Mechanics": [
             {
               "Name": "Buffet",
-              "Description": "Frontal AOE cone - Moderate damage - If a *Snowball is hit with this it will destroy it (bad).",
+              "Description": "AOE a cono frontale - Danno moderato. Se una *Snowball viene colpita questo la distruggerà (male).",
               "Type": 2
             },
             {
               "Name": "Frozen Mist",
-              "Description": "Frontal AOE cone - If a *Spriggan is hit by this they will turn into a *Snowball (good). Subsequent hits will make the Snowball larger (very good).",
+              "Description": "AoE a cono frontale. Se uno *Spriggan viene colpito si trasforma in una *Snowball (bene). I colpi successivi fanno ingrandire la Snowball (molto bene).",
               "Type": 2
             },
             {
               "Name": "Northerlies",
-              "Description": "Raidwide attack - High damage. When the boss is casting this, hit him with a *Snowball to interrupt",
+              "Description": "Attacco raidwide - Alto danno- Quando il boss fa partire il cast, colpitelo con una *Snowball per interromperlo",
               "Type": 4
             },
             {
-              "Name": "Adds",
-              "Description": "Spriggan Ice Cutter - *DO NOT kill these. Instead try and coordinate with the *Tank to line up *Frozen Mist\n\nFrostbound - These will attempt to destroy the *Snowballs, put them down ASAP.",
+              "Name": "Add",
+              "Description": "Spriggan Ice Cutter - *NON li uccidete. Invece provate a coordinarvi con il *Tank per allinearli per *Frozen Mist\n\nFrostbound - Questi cercheranno di distruggere le *Snowball, fateli fuori quanto prima.",
               "Type": 7
             }
           ]
@@ -87,31 +87,31 @@
       "Name": "Fenrir",
       "Phases": [
         {
-          "Strategy": "Everyone - When the *Ice Shards appear, pay attention. 2 of them will target random players with a line AOE. The final shard has a delayed circle AOE. Every other *Ice Shard phase the boss will cast *Lunar Cry. Hide behind the pillar which did NOT have a line AOE to dodge this, once the boss has finished that attack, run away as the shard will explode soon after.\n\nTank - Make sure to keep the boss facing away from the party, so you don't accidentally cleave them.\n\nHealer - Try and keep everyone topped up as most mechanics do a large amount of damage. Also, try and hold onto *Swiftcast so you can rez players fast as *Lunar Cry will kill anybody hit by it.\n\nDPS - Do damage & do the mechanics correctly. Less healing from the healer means a faster clear.",
+          "Strategy": "Tutti - Quando appaiono gli *Ice Shard, attenzione. 2 di loro targettano un giocatore a caso con una AoE lineare. L'ultimo shard fa un'AOE circolare ritardata. In ogni altra fase degli *Ice Shard il boss casterà *Lunar Cry. Nascondetevi dietro il pilastro che NON ha una AOE lineare per evitarlo, una volta che il boss finisce l'attacco, scappate in quanto il cristallo esploderà poco dopo.\n\nTank - Tieni il boss girato di spalle dal party, così da non danneggiarli accidentalmente.\n\nHealer - Cerca di tenere tutti a piena vita in quanto molte meccaniche fanno una grossa quantità di danni. In più, cerca di tenere *Swiftcast pronto in quanto potresti dover ressare giocatori velocemente in quanto *Lunar Cry ucciderà chiunque venga colpito.\n\nDPS - Fate danno e le meccaniche in modo corretto. Meno cure dall'healer significa clear più veloce.",
           "Mechanics": [
             {
               "Name": "Ecliptic Bite",
-              "Description": "Frontal cleave - Moderate damage. Used after *Lunar Cry. Damage is scaled by how many players are hit by the exploding shard.",
+              "Description": "Fendente frontale - Danno moderato. Usato dopo *Lunar Cry. Il danno scala in base a quanti giocatori vengono colpiti dal cristallo che esplode.",
               "Type": 9
             },
             {
               "Name": "Heavensward Howl",
-              "Description": "Frontal cleave - Moderate damage.",
+              "Description": "Fendente frontale - Danno moderato.",
               "Type": 9
             },
             {
               "Name": "Ice Shards",
-              "Description": "Telegraphed. 3 crystals will appear. 2 of which will target 2 random players with a line AOE. The final crystal will have a delayed circle AOE. If you are hit by the final circle AOE shard you will be hit by *Ecliptic Bite after. (Almost guaranteed death unless you are the Tank.)\n\nThe following attacks will swap back and forth each crystal phase.",
+              "Description": "Telegrafato. Appariranno 3 cristalli, 2 dei quali targetteranno 2 giocatori random con una AOE lineare. Il cristallo farà un'AOE circolare in ritardo. Se si viene colpiti dall'AOE circolare del frammento finale, si subisce il colpo di *Ecliptic Bite subito dopo. (Morte quasi garantita a meno che tu non sia Tank)\n\nI seguenti attacchi si scambieranno durante ogni frase dei cristalli.",
               "Type": 10
             },
             {
               "Name": "Lunar Cry",
-              "Description": "Raidwide damage - Instant kill if hit by it. This can be dodged by hiding behind the pillar that didn't have a line AOE.",
+              "Description": "Danno raidwaide - Uccisione istantanea se si viene colpiti. Si può evitare nascondendosi dietro il pilastro che non ha una AOE lineare.",
               "Type": 4
             },
             {
               "Name": "Thousand-year Storm",
-              "Description": "Raidwide damage - Moderate damage. Unavoidable",
+              "Description": "Danno raidwide - Danno moderato. Inevitabile",
               "Type": 4
             }
           ]
