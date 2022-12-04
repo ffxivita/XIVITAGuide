@@ -1,5 +1,5 @@
 # Immagine da usare
-FROM ghcr.io/ffxivita/docker-dalamud:latest@sha256:14c2778e393d4274a4159084f72564c0c03b2a0d827a9707f11b7fcbafa482c9
+FROM ghcr.io/ffxivita/docker-dalamud:latest@sha256:280c5a93b696e08eef2601c1b55bc256c29441235cef31ecb9423ec28a2e41a3
     
 # Variabili d'Ambiente
 ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
