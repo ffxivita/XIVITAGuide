@@ -15,26 +15,26 @@
       "Name": "Einhander",
       "Phases": [
         {
-          "Strategy": "Make sure to tank the boss pointing away from the party and avoid bombs AOE by standing in the gaps",
+          "Strategy": "Il tank deve assicurarsi di puntare il boss di spalle dal party ed evitare le AOE delle bombe stando negli spazi liberi",
           "Mechanics": [
             {
               "Name": "Resounding Screech",
-              "Description": "Summons a group of kin carrying bombs for large scale AOE damage\n\nThe first time, the bombs will be dropped and Mark XLI Quick-Firing Cannon will ignite the first two, stand to one side of the arena away from the two bombs while these two explode, the remaining will then be ignited at which point move to the very edge where one of the first two bombs was.\n\nThe following times the bombs will be dropped with some missing and ignited with Mark XLI Quick-Firing Cannon which will be a raidwide AOE originating in the centre igniting all bombs at once, move to the edge where the missing bombs are to avoid the AOE",
+              "Description": "Evoca un gruppo di bombe che fanno danni AOE su larga scala.\n\nLa prima volta, cadranno delle bombe e Mark XLI Firin Cannon accenderà le prime due stando dalla parte opposta dell'arena. Una volta esplose, toccherà alle altre due. Spostatevi dove sono esplose le prime due per non beccare danni.\n\nLe volte successive, tutte le bombe che cadranno saranno accese da Mark XLI Quick Firing Cannon che darà origine ad una AoE raidwide che partirà dal centro dell'arena. Spostatevi ai bordi privi di bombe per evitare la AoE",
               "Type": 2
             },
             {
               "Name": "Mark XLI Quick-Firing Cannon",
-              "Description": "This attack is a straight line AOE through the centre of the arena the first time.\nFollowing this it is a raidwide AOE causing more damage closer to the centre of the arena.\nUsed to ignite Bombs from Resounding Screech.",
+              "Description": "La prima volta questo attacco è un'AOE lineare diretta verso il centro dell'arena.\nA seguire si tratta di un'AOE raidwide che causa più danno vicino al centro dell'arena.\nUsata per accendere le bimbe dal Resounding Screech.",
               "Type": 2
             },
             {
               "Name": "Heavy Swing",
-              "Description": "This attack is a tank targetted cleave - tanks should keep the boss facing away from players at all time.",
+              "Description": "Questo attacco lancia un fendente sul tank - i tank devono tenere il boss di spalle ai giocatori tutto il tempo.",
               "Type": 9
             },
             {
               "Name": "Aero Blast",
-              "Description": "Raidwide AOE for medium damage",
+              "Description": "AOE raidwaide che fa danni medi",
               "Type": 4
             }
           ]
@@ -46,26 +46,26 @@
       "Name": "Magitek Gunship",
       "Phases": [
         {
-          "Strategy": "Tanks should keep the boss facing away at all times and be sure to not run back into the Flamethrower too early.\nAvoid straight-line AOE down arena centre.",
+          "Strategy": "I tank devono tenere il boss girato di spalle tutto il tempo ed assicurarsi di non correre troppo presto verso il Flamethrower.\nEvitare l'AOE in linea retta verso il centro dell'arena.",
           "Mechanics": [
             {
               "Name": "Flamethrower",
-              "Description": "This attack hits directly in front of the boss in a large cone and is continuous for a few seconds - tanks should keep the boss facing away from the group AND be sure not to run back into the attack too soon.",
+              "Description": "Questo attacco colpisce direttamente chi è di fronte al boss con un largo cono e continua per alcuni secondi - i tank devono tenere il boss lontano dal gruppo E non tornare all'attacco troppo presto.",
               "Type": 9
             },
             {
               "Name": "Garlean Fire",
-              "Description": "The boss will fly down the centre of the arena the first time while dropping large fire puddle AoEs which disappear after a couple of seconds.\nSubsequent uses he can also turn do another run along the edge after going down the centre.",
+              "Description": "Il boss si sposterà al centro dell'arena per la prima volta mentre rilascia delle AoE come grandi pozzanghere che spariranno dopo un paio di secondi.\nLe volte successive potrà anche scegliere un'altro percorso. Correre ai bordi dopo essere stati al centro dell'arena,",
               "Type": 2
             },
             {
               "Name": "Cohort Vanguard",
-              "Description": "These enemies will spawn during the fight and should be picked up and killed as quickly as possible.",
+              "Description": "Questi nemici appariranno durante il fight e vanno presi ed uccisi il prima possibile.",
               "Type": 7
             },
             {
               "Name": "Carpet Bomb",
-              "Description": "Targetted AOE on a random player",
+              "Description": "AOE che targetta un giocatore random",
               "Type": 2
             }
           ]
@@ -77,51 +77,51 @@
       "Name": "Midgardsomr",
       "Phases": [
         {
-          "Strategy": "Watch and act quickly to avoid the various types of AOE's\nMake sure to watch the position of the Phantom Kin\nEnsure the Mirage Dragons are killed ASAP to avoid wiping with the following Animadversion\nStay on the stack marker for 4 hits",
+          "Strategy": "Osserva e agisci rapidamente per evitare i vari tipi di AOE\nControlla la posizione del Phantom Kin\nI Mirage Dragons vanno uccisi quanto prima per evitare il wipe con il prossimo Animadversion\nRimanete nel marker dello stack per 4 colpi",
           "Mechanics": [
             {
               "Name": "Admonishment",
-              "Description": "This is a large column AOE down the center of the arena which can be avoided",
+              "Description": "Grande AoE a colonna al centro dell'arena. Può essere evitata.",
               "Type": 2
             },
             {
               "Name": "Turmoil",
-              "Description": "Observe the name of the cast to determine where to stand.\n\nInner Turmoil\n\tThis attack hits the inner half (closest to the boss) with an AoE - avoid as necessary.\n\nOuter Turmoil\n\tThis attack hits the outer area of the arena in a large half donut - stand within melee range to avoid damage.",
+              "Description": "Osserva il nome del cast per capire dove stare.\n\nInner Turmoil\n\tQuesto attacco colpisce la metà interna (più vicina al boss) con una AoE - evita se necessario\n\nOuter Turmoil\n\tQuesto attacco colpisce la parte esterna dell'arena con una grande mezza ciambella - state più vicini per evitare danni.",
               "Type": 2
             },
             {
               "Name": "Phantom Kin",
-              "Description": "One dragons gets summoned to each side of the arena, pay attention to which direction they are facing and pick a location where there is a gap in their gaze, the boss will then do one of his other abilities with \"Phantom\" in front (ie. Phantom Admonishment), when this ability casts the two dragons will do a straight line AOE across the arena each that takes up about 1/3 of the arena each. It is an AOE with a short period between marking and attack so make sure to pay attention to their gaze and the follow-up cast used to pre-position safely.",
+              "Description": "Un drago viene evocato ad ogni lato dell'arena. Presta attenzione in che direzione sono affacciati e scegli un posto dove c'è lo spazio fra il loro sguardo. Poi il boss farà una delle sue abilità con 'Phantom' davanti (es. Phantom Admonishment), quando casta questa abilità due draghi andranno in linea retta per l'arena, e prenderanno circa 1/3 di arena a testa. È un'AOE molto breve fra la segnalazione e l'attacco quindi fai attenzione al loro sguardo e il cast seguente usato per poterti posizionare in sicurezza.",
               "Type": 2
             },
             {
               "Name": "Disgust",
-              "Description": "Raidwide AOE with minor damage",
+              "Description": "AOE raidwide che provoca danni minimi",
               "Type": 2
             },
             {
               "Name": "Mirage Dragons",
-              "Description": "The boss will summon two Mirage Dragons in the middle of the arena which both need to be killed quickly, the higher Midgardsormr's Aether the more damage the following Animadversion will do, reaching 100 is instant wipe.",
+              "Description": "Il boss evocherà due Mirage Dragons nel mezzo dell'arena, i quali vanno uccisi rapidamente. Più è alto il Midgardsormr's Aether maggiore è il danno che farà il seguente Animadversion. Raggiungendo quota 100, è wipe istantaneo.",
               "Type": 8
             },
             {
               "Name": "Animadversion",
-              "Description": "Moderate damage raidwide AOE.",
+              "Description": "AOE raidwide con danno moderato.",
               "Type": 4
             },
             {
               "Name": "Akh Morn",
-              "Description": "Targets a random player indicated by a Stack Marker which all players should stack on to distribute the damage, will hit once, followed by a short pause, this then hits 3 more times in quick succession and players should not move from the stack until all have hit.",
+              "Description": "Mira ad un giocatore casuale indicato da uno Stack Marker su cui si devono radunare tutti i giocatori per mitigare il danno. Colpisce una volta, seguito da una breve pausa, poi colpisce altre 3 volte in rapida successione. I giocatori non devono spostarsi dal punto finché non ha fatto tutti i colpi.",
               "Type": 3
             },
             {
               "Name": "Antipathy",
-              "Description": "This attack places a circular AoE in the centre of the arena which then grows in rings over time before detonating in the same order they were placed.\nPlayers should stand in the second ring just at the edge of the first and move into the position of the first as soon as it detonates to avoid being hit by the second ring.",
+              "Description": "Questo attacco posiziona un'AoE circolare al centro dell'arena, che poi cresce in anelli nel tempo prima di detonare nello stesso ordine in cui sono stati posizionati.\nI giocatori devono stare nel secondo anello proprio al bordo del primo e muoversi in direzione del primo appena scoppia per evitare di venir colpiti dal secondo anello.",
               "Type": 2
             },
             {
               "Name": "Condescension",
-              "Description": "Targetted AOE on the tank with no area marker hitting for minor damage if only a single target is hit. Tank should move away from players",
+              "Description": "AOE che mira al tank senza alcun marcatore di area. Colpisce con minor danno se viene colpito un solo target. Il tank deve allontanarsi dai giocatori",
               "Type": 0
             }
           ]
