@@ -2,9 +2,8 @@ name: "PR: Chores"
 
 on:
   pull_request_target:
-  
+
 jobs:
-  # Label the pull request with its file changes
   Label:
     runs-on: ubuntu-latest
     permissions:
@@ -12,7 +11,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Label PR
-        uses: actions/labeler@5c7539237e04b714afd8ad9b4aed733815b9fab4 # v4
+        uses: actions/labeler@v4
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           sync-labels: true

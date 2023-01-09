@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
       - name: Set up .NET
-        uses: actions/setup-dotnet@608ee757cfcce72c2e91e99aca128e0cae67de87 # v1
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.0.x
 
@@ -40,19 +40,17 @@ jobs:
         shell: bash
         run: |
           dotnet build --configuration Release --nologo -p:AssemblyVersion=${{ steps.tag_name.outputs.TAG }} -p:AssemblyInformationalVersion=${{ steps.tag_name }}
-          sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/latest.zip  >> checksums.txt
-          sha512sum XIVITAGuide/bin/x64/Release/XIVITAGuide/XIVITAGuide.json >> checksums.txt
+          sha512sum XIVITAGuide/bin/Release/XIVITAGuide/latest.zip  >> checksums.txt
           cat checksums.txt
         env:
           DALAMUD_HOME: /tmp/dalamud
           IsCI: true
 
       - name: Release
-        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        uses: softprops/action-gh-release@v1
         with:
           generate_release_notes: true
           prerelease: false
           files: |
-            XIVITAGuide/bin/x64/Release/XIVITAGuide/latest.zip
-            XIVITAGuide/bin/x64/Release/XIVITAGuide/XIVITAGuide.json
+            XIVITAGuide/bin/Release/XIVITAGuide/latest.zip
             checksums.txt

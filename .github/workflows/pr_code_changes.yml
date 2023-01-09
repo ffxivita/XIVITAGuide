@@ -17,10 +17,10 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # v2
+        uses: actions/checkout@v2
 
       - name: Set up .NET
-        uses: actions/setup-dotnet@608ee757cfcce72c2e91e99aca128e0cae67de87 # v1
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.0.x
 
@@ -32,7 +32,6 @@ jobs:
         run: |
           wget https://goatcorp.github.io/dalamud-distrib/latest.zip -O /tmp/dalamud.zip
           unzip /tmp/dalamud.zip -d /tmp/dalamud
-
       - name: Build Plugin (Dev)
         working-directory: XIVITAGuide/
         run: dotnet build
@@ -48,7 +47,7 @@ jobs:
           IsCI: true
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb # v3
+        uses: actions/upload-artifact@v3
         with:
           name: build
           path: ./XIVITAGuide/bin
