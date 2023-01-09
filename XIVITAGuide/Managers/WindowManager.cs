@@ -28,9 +28,9 @@ namespace XIVITAGuide.Managers
         private readonly List<Window> windows = new()
         {
             new SettingsWindow(),
+            new GuideViewerWindow(),
             new GuideListWindow(),
             new EditorWindow(),
-            new GuideViewerWindow()
         };
 
         /// <summary>

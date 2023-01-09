@@ -9,8 +9,5 @@ namespace XIVITAGuide.IPC
     {
         [Description("Integrate with Wotsit to provide search capibilities.")]
         Wotsit = 0,
-
-        // [Description("Integrate with Tippy to provide awful tooltips.")]
-        // Tippy
     }
 }

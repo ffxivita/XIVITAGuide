@@ -1,10 +1,10 @@
+using System;
 using System.Collections.Generic;
 using CheapLoc;
 using Dalamud.Plugin.Ipc;
 using XIVITAGuide.Base;
 using XIVITAGuide.IPC.Interfaces;
 using XIVITAGuide.Localization;
-using XIVITAGuide.Managers;
 using XIVITAGuide.Types;
 using XIVITAGuide.UI.Windows.Editor;
 using XIVITAGuide.UI.Windows.GuideList;
@@ -18,6 +18,8 @@ namespace XIVITAGuide.IPC.Providers
     internal sealed class WotsitIPC : IIPCProvider
     {
         public IPCProviders ID { get; } = IPCProviders.Wotsit;
+        public bool ForcefullyDisabled { get; private set; }
+        public bool Initialized { get; private set; }
 
         /// <summary>
         ///     The IconID that represents KikoGuide in Wotsit.
@@ -91,12 +93,26 @@ namespace XIVITAGuide.IPC.Providers
 
         public void Dispose()
         {
+            if (!this.Initialized)
+            {
+                return;
+            }
+
             try
             {
                 this.wotsitUnregister?.InvokeFunc(PluginConstants.PluginName);
                 this.wotsitAvailable?.Unsubscribe(this.Initialize);
                 this.wotsitInvoke?.Unsubscribe(this.HandleInvoke);
                 PluginService.PluginInterface.LanguageChanged -= this.OnLanguageChange;
+
+                this.wotsitRegister = null;
+                this.wotsitUnregister = null;
+                this.wotsitAvailable = null;
+                this.wotsitInvoke = null;
+                this.wotsitOpenListIpc = null;
+                this.wotsitOpenEditorIpc = null;
+                this.wotsitGuideIpcs.Clear();
+                this.Initialized = false;
             }
             catch { /* Ignore */ }
         }
@@ -106,6 +122,11 @@ namespace XIVITAGuide.IPC.Providers
         /// </summary>
         private void Initialize()
         {
+            if (this.Initialized)
+            {
+                throw new InvalidOperationException("Wotsit IPC already initialized.");
+            }
+
             this.wotsitRegister = PluginService.PluginInterface.GetIpcSubscriber<string, string, uint, string>(LabelProviderRegister);
             this.wotsitUnregister = PluginService.PluginInterface.GetIpcSubscriber<string, bool>(LabelProviderUnregisterAll);
             this.wotsitInvoke = PluginService.PluginInterface.GetIpcSubscriber<string, bool>(LabelProviderInvoke);
@@ -114,6 +135,8 @@ namespace XIVITAGuide.IPC.Providers
             this.RegisterAll();
 
             PluginService.PluginInterface.LanguageChanged += this.OnLanguageChange;
+
+            this.Initialized = true;
         }
 
         /// <summary>
