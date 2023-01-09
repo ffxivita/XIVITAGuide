@@ -9,9 +9,9 @@ using XIVITAGuide.UI.ImGuiBasicComponents;
 
 namespace XIVITAGuide.UI.ImGuiFullComponents.MechanicTable
 {
-    public static class MechanicTableComponent
+    internal static class MechanicTableComponent
     {
-        public static void Draw(List<Guide.Section.Phase.Mechanic> mechanics)
+        internal static void Draw(List<Guide.Section.Phase.Mechanic> mechanics)
         {
             try
             {
@@ -20,7 +20,6 @@ namespace XIVITAGuide.UI.ImGuiFullComponents.MechanicTable
 
                 if (!mechanics.All(x => hiddenMechanics?.Contains((GuideMechanics)x.Type) ?? false))
                 {
-
                     if (ImGui.BeginTable("##MechanicTableComponentMechTable", 3, ImGuiTableFlags.Hideable | ImGuiTableFlags.Reorderable | ImGuiTableFlags.Borders | ImGuiTableFlags.Resizable))
                     {
                         ImGui.TableSetupColumn(label: TGenerics.Mechanic);
@@ -40,8 +39,8 @@ namespace XIVITAGuide.UI.ImGuiFullComponents.MechanicTable
                             ImGui.TableNextColumn();
                             ImGui.TextWrapped((shortMode && mechanic.ShortDescription != null) ? mechanic.ShortDescription : mechanic.Description);
                             ImGui.TableNextColumn();
-                            ImGui.Text(AttributeExtensions.GetNameAttribute((GuideMechanics)mechanic.Type));
-                            Common.AddTooltip(AttributeExtensions.GetDescriptionAttribute((GuideMechanics)mechanic.Type));
+                            ImGui.Text(((GuideMechanics)mechanic.Type).GetNameAttribute());
+                            Common.AddTooltip(((GuideMechanics)mechanic.Type).GetDescriptionAttribute());
                         }
 
                         ImGui.EndTable();

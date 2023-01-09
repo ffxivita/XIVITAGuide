@@ -5,10 +5,11 @@ using Dalamud.Interface.ImGuiFileDialog;
 using Dalamud.Interface.Internal.Notifications;
 using XIVITAGuide.Base;
 using XIVITAGuide.IPC;
+using XIVITAGuide.Utils;
 
 namespace XIVITAGuide.UI.Windows.Settings
 {
-    public sealed class SettingsPresenter : IDisposable
+    internal sealed class SettingsPresenter : IDisposable
     {
         public void Dispose() { }
 
@@ -20,12 +21,14 @@ namespace XIVITAGuide.UI.Windows.Settings
         /// <summary>
         ///     Sets an IPCProvider as enabled.
         /// </summary>
-        public static void SetIPCProviderEnabled(IPCProviders provider) => PluginService.IPC.EnableProvider(provider);
+        /// <param name="provider"> The provider to enable. </param>
+        internal static void SetIPCProviderEnabled(IPCProviders provider) => PluginService.IPC.EnableProvider(provider);
 
         /// <summary>
         ///     Sets an IPCProvider as disabled.
         /// </summary>
-        public static void SetIPCProviderDisabled(IPCProviders provider) => PluginService.IPC.DisableProvider(provider);
+        /// <param name="provider"> The provider to disable. </param>
+        internal static void SetIPCProviderDisabled(IPCProviders provider) => PluginService.IPC.DisableProvider(provider);
 
 #if DEBUG
         internal FileDialogManager DialogManager = new();
@@ -33,9 +36,11 @@ namespace XIVITAGuide.UI.Windows.Settings
         /// <summary>
         ///     Handles the directory select event and saves the location to that directory.
         /// </summary>
-        public static void OnDirectoryPicked(bool success, string path)
+        /// <param name="cancelled">Whether the dialog was cancelled.</param>
+        /// <param name="path">The path to the selected directory.</param>
+        internal static void OnDirectoryPicked(bool cancelled, string path)
         {
-            if (!success)
+            if (!cancelled)
             {
                 return;
             }
@@ -45,7 +50,7 @@ namespace XIVITAGuide.UI.Windows.Settings
             Loc.ExportLocalizable();
             File.Copy(Path.Combine(path, "XIVITAGuide_Localizable.json"), Path.Combine(path, "en.json"), true);
             Directory.SetCurrentDirectory(directory);
-            PluginService.PluginInterface.UiBuilder.AddNotification("Localization exported successfully.", PluginConstants.PluginName, NotificationType.Success);
+            Notifications.ShowToast(message: "Localization exported successfully", type: NotificationType.Success);
         }
 #endif
     }

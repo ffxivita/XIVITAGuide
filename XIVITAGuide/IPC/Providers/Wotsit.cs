@@ -15,12 +15,12 @@ namespace XIVITAGuide.IPC.Providers
     /// <summary>
     ///     Provider for Wotsit
     /// </summary>
-    public sealed class WotsitIPC : IIPCProvider
+    internal sealed class WotsitIPC : IIPCProvider
     {
         public IPCProviders ID { get; } = IPCProviders.Wotsit;
 
         /// <summary>
-        ///     The IconID that represents XIVITAGuide in Wotsit.
+        ///     The IconID that represents KikoGuide in Wotsit.
         /// </summary>
         private const uint WotsitIconID = 21;
 
@@ -93,10 +93,10 @@ namespace XIVITAGuide.IPC.Providers
         {
             try
             {
-                PluginService.PluginInterface.LanguageChanged += this.OnLanguageChange;
                 this.wotsitUnregister?.InvokeFunc(PluginConstants.PluginName);
                 this.wotsitAvailable?.Unsubscribe(this.Initialize);
                 this.wotsitInvoke?.Unsubscribe(this.HandleInvoke);
+                PluginService.PluginInterface.LanguageChanged -= this.OnLanguageChange;
             }
             catch { /* Ignore */ }
         }
@@ -110,10 +110,10 @@ namespace XIVITAGuide.IPC.Providers
             this.wotsitUnregister = PluginService.PluginInterface.GetIpcSubscriber<string, bool>(LabelProviderUnregisterAll);
             this.wotsitInvoke = PluginService.PluginInterface.GetIpcSubscriber<string, bool>(LabelProviderInvoke);
 
-            PluginService.PluginInterface.LanguageChanged += this.OnLanguageChange;
-
             this.wotsitInvoke?.Subscribe(this.HandleInvoke);
             this.RegisterAll();
+
+            PluginService.PluginInterface.LanguageChanged += this.OnLanguageChange;
         }
 
         /// <summary>
@@ -126,9 +126,14 @@ namespace XIVITAGuide.IPC.Providers
                 return;
             }
 
-            foreach (var guide in GuideManager.GetGuides())
+            foreach (var guide in PluginService.GuideManager.GetAllGuides())
             {
-                var guid = this.wotsitRegister.InvokeFunc(PluginConstants.PluginName, WotsitTranslations.WotsitIPCOpenGuideFor(guide.CanonicalName), WotsitIconID);
+                if (!guide.IsSupported() || guide.IsHidden())
+                {
+                    continue;
+                }
+
+                var guid = this.wotsitRegister.InvokeFunc(PluginConstants.PluginName, WotsitTranslations.WotsitIPCOpenGuideFor(guide.GetCanonicalName()), WotsitIconID);
                 this.wotsitGuideIpcs.Add(guid, guide);
             }
 
@@ -146,7 +151,7 @@ namespace XIVITAGuide.IPC.Providers
             {
                 if (PluginService.WindowManager.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow guideViewerWindow)
                 {
-                    guideViewerWindow.Presenter.SelectedGuide = guide;
+                    guideViewerWindow.Presenter.SetSelectedGuide(guide);
                     guideViewerWindow.IsOpen = true;
                 }
             }
@@ -181,9 +186,9 @@ namespace XIVITAGuide.IPC.Providers
         /// </summary>
         private static class WotsitTranslations
         {
-            public static string WotsitIPCOpenGuideList => Loc.Localize("IPC.Wotsit.OpenGuideList", "Open Guide List");
-            public static string WotsitIPCOpenGuideEditor => Loc.Localize("IPC.Wotsit.OpenGuideEditor", "Open Guide Editor");
-            public static string WotsitIPCOpenGuideFor(string guideName) => string.Format(Loc.Localize("IPC.Wotsit.OpenGuideFor", "Open Guide for {0}"), guideName);
+            internal static string WotsitIPCOpenGuideList => Loc.Localize("IPC.Wotsit.OpenGuideList", "Open Guide List");
+            internal static string WotsitIPCOpenGuideEditor => Loc.Localize("IPC.Wotsit.OpenGuideEditor", "Open Guide Editor");
+            internal static string WotsitIPCOpenGuideFor(string guideName) => string.Format(Loc.Localize("IPC.Wotsit.OpenGuideFor", "Open Guide for {0}"), guideName);
         }
     }
 }

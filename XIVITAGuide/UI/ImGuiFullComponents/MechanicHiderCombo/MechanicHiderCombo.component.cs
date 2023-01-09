@@ -9,10 +9,10 @@ using XIVITAGuide.UI.ImGuiBasicComponents;
 
 namespace XIVITAGuide.UI.ImGuiFullComponents.MechanicHiderCombo
 {
-    public static class MechanicHiderComboComponent
+    internal static class MechanicHiderComboComponent
     {
         private static string hiddenSectionFilter = string.Empty;
-        public static void Draw()
+        internal static void Draw()
         {
             var disabledMechanic = MechanicHiderComboPresenter.Configuration.Display.HiddenMechanics;
             if (ImGui.BeginCombo("##MechanicHiderCombo", $"Hidden Mechanic Types: {disabledMechanic.Count}"))

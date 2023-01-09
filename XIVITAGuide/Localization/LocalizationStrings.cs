@@ -19,10 +19,10 @@ namespace XIVITAGuide.Localization
     /// </summary>
     internal sealed class TWindowNames
     {
-        public static string Settings => string.Format(Loc.Localize("Window.Settings", "{0} - Settings"), PluginConstants.PluginName);
-        public static string GuideList => string.Format(Loc.Localize("Window.GuideList", "{0} - Guide List"), PluginConstants.PluginName);
-        public static string GuideViewer => string.Format(Loc.Localize("Window.GuideViewer", "{0} - Guide Viewer"), PluginConstants.PluginName);
-        public static string GuideEditor => string.Format(Loc.Localize("Window.GuideEditor", "{0} - Guide Editor"), PluginConstants.PluginName);
+        internal static string Settings => string.Format(Loc.Localize("Window.Settings", "{0} - Settings"), PluginConstants.PluginName);
+        internal static string GuideList => string.Format(Loc.Localize("Window.GuideList", "{0} - Guide List"), PluginConstants.PluginName);
+        internal static string GuideViewer => string.Format(Loc.Localize("Window.GuideViewer", "{0} - Guide Viewer"), PluginConstants.PluginName);
+        internal static string GuideEditor => string.Format(Loc.Localize("Window.GuideEditor", "{0} - Guide Editor"), PluginConstants.PluginName);
     }
 
     /// <summary>
@@ -48,6 +48,9 @@ namespace XIVITAGuide.Localization
         internal static string Unknown => Loc.Localize("Generics.Unknown", "Sconosciuto");
         internal static string Unspecified => Loc.Localize("Generics.Unspecified", "Non specificato");
         internal static string None => Loc.Localize("Generics.None", "Nessuno");
+        internal static string InTerritory => Loc.Localize("Generics.InTerritory", "In Territory");
+        internal static string Note => Loc.Localize("Generics.Note", "Note");
+        internal static string Tips => Loc.Localize("Generics.Tips", "Tips");
     }
 
     /// <summary>

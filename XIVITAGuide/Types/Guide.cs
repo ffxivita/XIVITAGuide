@@ -28,14 +28,37 @@ namespace XIVITAGuide.Types
         public int Version = 1;
 
         /// <summary>
+        ///     The guide's internal name, should be unique and not change after creation.
+        /// </summary>
+        public string InternalName;
+
+        /// <summary>
+        ///     The constructor for a guide.
+        /// </summary>
+        public Guide(string internalName)
+        {
+            this.InternalName = internalName;
+
+            if (this.InternalName == null)
+            {
+                throw new ArgumentNullException(nameof(internalName));
+            }
+        }
+
+        /// <summary>
         ///     The duty/guide name.
         /// </summary>
         public string Name = "???";
 
         /// <summary>
-        ///     Whether or not this duty is disabled and shouldn't be accessible.
+        ///     Whether or not this duty is disabled and shouldn't be loaded.
         /// </summary>
         public bool Disabled;
+
+        /// <summary>
+        ///     Whether or not the guide is hidden from all forms of listing. Will still be accessible via auto-open.
+        /// </summary>
+        public bool Hidden;
 
         /// <summary>
         ///     The duty difficulty level.
@@ -65,12 +88,17 @@ namespace XIVITAGuide.Types
         /// <summary>
         ///     The duty's TerritoryIDs(s).
         /// </summary>
-        public List<uint> TerritoryIDs = new();
+        public uint[] TerritoryIDs = Array.Empty<uint>();
 
         /// <summary>
         ///     The lore for the duty.
         /// </summary>
         public string? Lore;
+
+        /// <summary>
+        ///     The guide's authors.
+        /// </summary>
+        public string[]? Authors = Array.Empty<string>();
 
         /// <summary>
         ///     The guide section data.
@@ -98,7 +126,7 @@ namespace XIVITAGuide.Types
             public List<Phase>? Phases;
 
             /// <summary>
-            ///     Represents a phase of a guide.
+            ///     Represents a phase of a section.
             /// </summary>
             public class Phase
             {
@@ -123,12 +151,12 @@ namespace XIVITAGuide.Types
                 public List<Mechanic>? Mechanics;
 
                 /// <summary>
-                ///     The phase's associated notes.
+                ///     The phase's associated tips.
                 /// </summary>
-                public List<Note>? Notes;
+                public List<Tip>? Tips;
 
                 /// <summary>
-                ///     Represents a mechanic of a guide.
+                ///     Represents a mechanic of a phase.
                 /// </summary>
                 public class Mechanic
                 {
@@ -154,9 +182,9 @@ namespace XIVITAGuide.Types
                 }
 
                 /// <summary>
-                ///     Represents a note of a guide.
+                ///     Represents a tip of a phase.
                 /// </summary>
-                public class Note
+                public class Tip
                 {
                     public string? Text { get; set; }
                     public string? TextShort { get; set; }
@@ -195,9 +223,8 @@ namespace XIVITAGuide.Types
         /// <summary>
         ///     Get the canonical name for the duty/guide.
         /// </summary>
-        public string CanonicalName
+        public string GetCanonicalName()
         {
-            get
             {
                 if (!Enum.IsDefined(typeof(DutyDifficulty), this.Difficulty))
                 {
@@ -220,21 +247,30 @@ namespace XIVITAGuide.Types
         public bool IsUnlocked() => (this.UnlockQuestID != 0 && QuestManager.IsQuestCurrent(this.UnlockQuestID)) || QuestManager.IsQuestComplete(this.UnlockQuestID);
 
         /// <summary>
-        ///     Whether or not this guide is disabled.
+        ///     Whether or not this guide is hidden and should not be listed.
         /// </summary>
-        public bool IsDisabled => this.Disabled;
+        public bool IsHidden() => this.Hidden || this.Disabled;
     }
 
     public enum DutyType
     {
-        [Name("Dungeon")]
+        [Name("Dungeon"), PluralName("Dungeons")]
         Dungeon = 0,
 
-        [Name("Trial")]
+        [Name("Trial"), PluralName("Trials")]
         Trial = 1,
 
-        [Name("Alliance Raid")]
+        [Name("Alliance Raid"), PluralName("Alliance Raids")]
         AllianceRaid = 2,
+
+        [Name("Raid"), PluralName("Raids")]
+        Raid = 3,
+
+        [Name("FATE"), PluralName("FATEs")]
+        FATE = 4,
+
+        [Name("Misc"), PluralName("Misc")]
+        Misc = 5,
     }
 
     public enum DutyDifficulty

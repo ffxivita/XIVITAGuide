@@ -9,10 +9,10 @@ using XIVITAGuide.UI.ImGuiBasicComponents;
 
 namespace XIVITAGuide.UI.ImGuiFullComponents.IPCProviderCombo
 {
-    public static class IPCProviderComboComponent
+    internal static class IPCProviderComboComponent
     {
         private static string searchFilter = string.Empty;
-        public static void Draw()
+        internal static void Draw()
         {
             var enabledIntegrations = IPCProviderComboPresenter.Configuration.IPC.EnabledIntegrations;
             if (ImGui.BeginCombo("##IPCProviderCombo", $"Enabled Integrations: {enabledIntegrations.Count}"))
@@ -43,7 +43,6 @@ namespace XIVITAGuide.UI.ImGuiFullComponents.IPCProviderCombo
                             IPCProviderComboPresenter.Configuration.Save();
                             IPCProviderComboPresenter.IPC.EnableProvider(provider);
                         }
-
                     }
                     Common.AddTooltip(provider.GetDescriptionAttribute());
                 }

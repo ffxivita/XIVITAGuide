@@ -13,7 +13,7 @@ using XIVITAGuide.UI.ImGuiFullComponents.GuideListTable;
 
 namespace XIVITAGuide.UI.Windows.GuideList
 {
-    public sealed class GuideListWindow : Window, IDisposable
+    internal sealed class GuideListWindow : Window, IDisposable
     {
         internal GuideListPresenter Presenter;
         public GuideListWindow() : base(TWindowNames.GuideList)
@@ -46,8 +46,7 @@ namespace XIVITAGuide.UI.Windows.GuideList
                 return;
             }
 
-            // If the plugin detects no gudies, show a warning message.
-            var guides = GuideListPresenter.GetGuides();
+            var guides = GuideListPresenter.GetGuides().Where(guide => !guide.IsHidden()).ToList();
             if (guides.Count == 0)
             {
                 Colours.TextWrappedColoured(Colours.Error, TGuideListTable.NoGuidesFilesDetected);
@@ -84,11 +83,17 @@ namespace XIVITAGuide.UI.Windows.GuideList
             ImGui.BeginTabBar("##DutyListTabBar");
             foreach (var dutyType in Enum.GetValues(typeof(DutyType)).Cast<int>().ToList())
             {
-                if (ImGui.BeginTabItem(((DutyType)dutyType).GetNameAttribute()))
+                if (guides.Where(guide => guide.Type == (DutyType)dutyType).ToList().Count == 0)
+                {
+                    continue;
+                }
+
+                // Show the tab and draw the guides with the text filter applied if applicable.
+                if (ImGui.BeginTabItem(((DutyType)dutyType).GetPluralNameAttribute()))
                 {
                     ImGui.BeginChild(dutyType.ToString());
 
-                    GuideListTableComponent.Draw(guides, (guide) => GuideListPresenter.OnGuideListSelection(guide), this.searchText, (DutyType)dutyType);
+                    GuideListTableComponent.Draw(guides, GuideListPresenter.OnGuideListSelection, this.searchText, (DutyType)dutyType);
 
                     ImGui.EndChild();
                     ImGui.EndTabItem();

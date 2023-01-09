@@ -14,8 +14,19 @@ namespace XIVITAGuide.Managers
     /// </summary>
     internal sealed class ResourceManager : IDisposable
     {
-        internal event ResourceUpdateDelegate? ResourcesUpdated;
-        internal delegate void ResourceUpdateDelegate();
+        /// <summary>
+        ///     The delegate for the ResourceUpdate event.
+        /// </summary>
+        internal delegate void DelegateResourceUpdate();
+
+        /// <summary>
+        ///     The event that is fired when the resources are updated.
+        /// </summary>
+        internal event DelegateResourceUpdate? ResourcesUpdated;
+
+        /// <summary>
+        ///     Whether or not the resources have been initialized yet.
+        /// </summary>
         private bool initialized;
 
         /// <summary>
@@ -27,18 +38,16 @@ namespace XIVITAGuide.Managers
 
             this.Setup(PluginService.PluginInterface.UiLanguage);
             PluginService.PluginInterface.LanguageChanged += this.Setup;
-            ResourcesUpdated += this.OnResourceUpdate;
 
             PluginLog.Debug("ResourceManager(ResourceManager): Initialization complete.");
         }
 
         /// <summary>
-        //      Disposes of the ResourceManager and associated resources.
+        ///      Disposes of the ResourceManager and associated resources.
         /// </summary>
         public void Dispose()
         {
             PluginService.PluginInterface.LanguageChanged -= this.Setup;
-            ResourcesUpdated -= this.OnResourceUpdate;
 
             PluginLog.Debug("ResourceManager(Dispose): Successfully disposed.");
         }
@@ -68,7 +77,7 @@ namespace XIVITAGuide.Managers
                         using var fileStream = File.Create(zipFilePath);
                         stream.CopyTo(fileStream);
                     }).Wait();
-                    PluginLog.Information($"ResourceManager(Update): Downloaded resource files to: {zipFilePath}");
+                    PluginLog.Information("ResourceManager(Update): Downloaded resource files to: {zipFilePath}");
 
                     // Extract the zip file and copy the resources.
                     ZipFile.ExtractToDirectory(zipFilePath, Path.GetTempPath(), true);
@@ -89,24 +98,17 @@ namespace XIVITAGuide.Managers
                     Directory.Delete($"{Path.GetTempPath()}{repoName}-{PluginConstants.RepoBranch}", true);
                     PluginLog.Information("ResourceManager(Update): Deleted temporary files.");
 
-                    // Broadcast an event indicating that the resources have been updated.
-                    ResourcesUpdated?.Invoke();
+                    // Re-setup resources.
+                    this.Setup(PluginService.PluginInterface.UiLanguage);
                 }
                 catch (Exception e) { PluginLog.Error($"ResourceManager(Update): Error updating resource files: {e.Message}"); }
             }).Start();
         }
 
         /// <summary>
-        ///     Handles the OnResourceUpdate event.
-        /// </summary>
-        private void OnResourceUpdate()
-        {
-            PluginLog.Debug("ResourceManager(OnResourceUpdate): Resources updated.");
-            this.Setup(PluginService.PluginInterface.UiLanguage);
-        }
-
-        /// <summary>
         ///     Sets up the plugin's resources.
+        /// </summary>
+        /// <param name="language">The two-letter language code to use.</param>)
         /// </summary>
         private void Setup(string language)
         {
@@ -114,7 +116,7 @@ namespace XIVITAGuide.Managers
 
             if (this.initialized)
             {
-                GuideManager.ClearCache();
+                this.ResourcesUpdated?.Invoke();
             }
 
             try
@@ -122,7 +124,7 @@ namespace XIVITAGuide.Managers
             catch { Loc.SetupWithFallbacks(); }
 
             this.initialized = true;
-            PluginLog.Information("ResourceManager(Setup): Resources setup.");
+            PluginLog.Debug("ResourceManager(Setup): Resources setup.");
         }
     }
 }

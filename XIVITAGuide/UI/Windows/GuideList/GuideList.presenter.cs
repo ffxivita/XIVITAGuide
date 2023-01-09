@@ -2,31 +2,30 @@ using System;
 using System.Collections.Generic;
 using XIVITAGuide.Base;
 using XIVITAGuide.Localization;
-using XIVITAGuide.Managers;
 using XIVITAGuide.Types;
 using XIVITAGuide.UI.Windows.GuideViewer;
 
 namespace XIVITAGuide.UI.Windows.GuideList
 {
-    public sealed class GuideListPresenter : IDisposable
+    internal sealed class GuideListPresenter : IDisposable
     {
         public void Dispose() { }
 
         /// <summary>
         ///     Gets the guide list from the GuideManager.
         /// </summary>
-        public static List<Guide> GetGuides() => GuideManager.GetGuides();
+        internal static List<Guide> GetGuides() => PluginService.GuideManager.GetAllGuides();
 
         /// <summary>
         ///     Handles a guide list selection event.
         /// </summary>
         /// <param name="guide">The guide that was selected.</param>
-        public static void OnGuideListSelection(Guide guide)
+        internal static void OnGuideListSelection(Guide guide)
         {
             if (PluginService.WindowManager.GetWindow(TWindowNames.GuideViewer) is GuideViewerWindow guideViewerWindow)
             {
                 guideViewerWindow.IsOpen = true;
-                guideViewerWindow.Presenter.SelectedGuide = guide;
+                guideViewerWindow.Presenter.SetSelectedGuide(guide);
             }
         }
 
