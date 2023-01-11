@@ -17,7 +17,7 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791 # v2
+        uses: actions/checkout@dc323e67f16fb5f7663d20ff7941f27f5809e9b6 # v2
 
       - name: Set up .NET
         uses: actions/setup-dotnet@608ee757cfcce72c2e91e99aca128e0cae67de87 # v1
